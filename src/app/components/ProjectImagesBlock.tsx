@@ -17,20 +17,22 @@ interface ProjectImagesBlockProps {
 
 const ProjectImagesBlock: React.FC<ProjectImagesBlockProps> = ({ images, direction = 'row', width, maxHeight, caption, children }) => {
   return (
-    <div className="w-full max-w-7xl mx-auto flex flex-row gap-8">
+    <div className="w-full max-w-7xl mx-auto flex flex-row ">
       <section className="flex-1">
         <div className={`grid gap-6 ${
           direction === 'row' 
             ? `grid-cols-1 ${
                 images.length > 1 ? 'md:grid-cols-2' : ''
               } ${
-                images.length > 2 ? 'lg:grid-cols-3' : ''
+                images.length > 3 ? 'lg:grid-cols-3' : ''
+              } ${
+                images.length > 4 ? 'lg:grid-cols-5' : ''
               }`
             : 'grid-cols-1'
         }`}>
           {images.map((image, index) => (
             <div key={index} 
-                 className={`flex flex-col space-y-2 ${
+                 className={`flex flex-col ${
                    direction === 'column' ? 'mb-6' : ''
                  }`}>
               <div className="w-full" style={{ maxWidth: `${width * 100}px` }}>
@@ -53,7 +55,7 @@ const ProjectImagesBlock: React.FC<ProjectImagesBlockProps> = ({ images, directi
         )}
       </section>
       {children && (
-        <div className="flex-1">
+        <div className="flex-1 p-4">
           {children}
         </div>
       )}

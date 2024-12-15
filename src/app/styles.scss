@@ -1,0 +1,105 @@
+/** Define global color pallete for light and dark mode **/
+$color-pallete: (
+    light: (
+        primary: #9C27B0,    // Vivid magenta
+        secondary: #1976D2,   // Strong blue
+        accent: #E040FB,      // Bright magenta
+        success: #2E7D32,     // Dark green
+        danger: #D32F2F,      // Bright red
+        warning: #F57C00,     // Dark orange
+        info: #0288D1,        // Info blue
+        grey-100: #F5F5F5,    // Lightest grey
+        grey-200: #E0E0E0,    // Light grey
+        grey-700: #616161,    // Medium grey
+        grey-900: #212121     // Darkest grey
+    ),
+    dark: (
+        primary: #CE93D8,     // Light magenta
+        secondary: #64B5F6,   // Light blue
+        accent: #F48FB1,      // Light pink
+        success: #81C784,     // Light green
+        danger: #E57373,      // Light red
+        warning: #FFB74D,     // Light orange
+        info: #4FC3F7,        // Light info blue
+        grey-100: #212121,    // Darkest grey
+        grey-200: #424242,    // Dark grey
+        grey-700: #BDBDBD,    // Light grey
+        grey-900: #F5F5F5     // Lightest grey
+    )
+);
+
+// Function to get theme colors
+@function get-color($theme, $color) {
+    @return map-get(map-get($color-pallete, $theme), $color);
+}
+
+// Usage in your styles
+body {
+    background-color: get-color('light', 'grey-100');
+    color: get-color('light', 'grey-900');
+}
+
+main.project-page {
+    margin: 0 auto;
+    max-width: 70rem;
+    padding: 1.25rem;
+    background-color: get-color('light', 'grey-100');
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+    color: get-color('light', 'primary');
+}
+
+h2, h3, h4, h5, h6 {
+    font-size: 1.25em;
+    margin: 0.75rem 0;
+    color: get-color('light', 'secondary');
+}
+
+h3 {
+    font-size: 1.125em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+p {
+    font-size: 1em;
+    color: get-color('light', 'grey-700');
+}
+
+main.project-page ul {
+    list-style-type: disc;
+    padding: 0;
+    margin: 0.5rem 0;
+}
+
+main.project-page ul, li {
+    margin-left: 0.75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: get-color('dark', 'grey-100');
+        color: get-color('dark', 'grey-900');
+    }
+
+    main.project-page {
+        background-color: get-color('dark', 'grey-100');
+    }
+
+    h1 {
+        color: get-color('dark', 'primary');
+    }
+
+    h2, h3, h4, h5, h6 {
+        color: get-color('dark', 'secondary');
+    }
+
+    p {
+        color: get-color('dark', 'grey-700');
+    }
+}

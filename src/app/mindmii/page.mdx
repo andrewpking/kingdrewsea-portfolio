@@ -1,5 +1,6 @@
 import ProjectImagesBlock from "../components/ProjectImagesBlock";
 import ProjectTeamGallery from "../components/ProjectTeamGallery";
+import '../styles.scss';
 
 export const images = {
   imageTeamPerson1: "/images/mindmii/Drew.png",
@@ -33,6 +34,7 @@ export const images = {
   watchFour: "/images/mindmii/watch_4.png",
 };
 
+<main className="project-page">
 
 # MindMii
 
@@ -370,3 +372,5 @@ Using the keyboard, the person drafts a response to the message. Upon completion
 Examining our other task to respond to a message in an appropriate amount of time, our scenario has MindMii notifying the person of an urgent message from earlier that needs a reply soon. The person decides to snooze the message since they are busy, but the app AI recognizes this message is time-sensitive and limits the snooze to five minutes. Following this, it re-prompts the person about this message and they realize the urgency of the message.
 
 The person opens the message and enters into reply mode. AI is there to support with suggestions, but the user composes a message of their own using the keyboard and presses send. The response is routed to the platform the message is native to. The notification is cleared from the lock screen. Messages are no longer forgotten with MindMii!
+
+</main>
