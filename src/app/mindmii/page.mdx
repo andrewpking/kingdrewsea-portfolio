@@ -1,11 +1,38 @@
 import ProjectImagesBlock from "../components/ProjectImagesBlock";
 import ProjectTeamGallery from "../components/ProjectTeamGallery";
 
+export const images = {
+  imageTeamPerson1: "/images/mindmii/Drew.png",
+  imageTeamPerson2: "/images/mindmii/Lee.png",
+  imageTeamPerson3: "/images/mindmii/Chris.png",
+  lateReply: "/images/mindmii/late_reply.jpg",
+  brenda: "/images/mindmii/brenda_1.png",
+  ava: "/images/mindmii/ava_1.png",
+  paperWatch: "/images/mindmii/paper_watch.png",
+  paperPhone: "/images/mindmii/paper_phone.png",
+  paperClock1: "/images/mindmii/paper_watch_clock.png",
+  paperClock2: "/images/mindmii/paper_watch_urgent_clock.png",
+  paperWatchUrgent1: "/images/mindmii/paper_watch_urgent_1.png",
+  paperWatchUrgent2: "/images/mindmii/paper_watch_urgent_2.png",
+  aiComposePaper: "/images/mindmii/ai_compose_paper.png",
+  aiComposePaperOriginal: "/images/mindmii/first_ai_compose_paper.png",
+  paperReply: "/images/mindmii/paper_watch_reply.jpg",
+  paperReplyAssist: "/images/mindmii/paper_watch_reply_assist.png",
+  mainScreen: "/images/mindmii/main_screen.png",
+  messages: "/images/mindmii/messages.png",
+  texting: "/images/mindmii/texting.png",
+  aiComposePrompt: "/images/mindmii/ai_compose_prompt.png",
+  aiComposeResponse: "/images/mindmii/compose_response.png",
+  popup: "/images/mindmii/popup.png",
+  toneCheck: "/images/mindmii/tone_check.png",
+  reply: "/images/mindmii/reply.png",
+  finalResponse: "/images/mindmii/final_response.png",
+  watchOne: "/images/mindmii/watch_1.png",
+  watchTwo: "/images/mindmii/watch_2.png",
+  watchThree: "/images/mindmii/watch_3.png",
+  watchFour: "/images/mindmii/watch_4.png",
+};
 
-// Photo resources:
-import imageTeamPerson1 from "public/Drew.png";
-import imageTeamPerson2 from "public/Lee.jpg";
-import imageTeamPerson3 from "public/Chris.jpg";
 
 # MindMii
 
@@ -17,17 +44,17 @@ Talk calmly, when you're ready.
     members={[
       {
         name: ["Drew King", "(They/Them)"],
-        photo: imageTeamPerson1,
+        photo: images.imageTeamPerson1,
         // A default alt of "Photo of Team Person 1." will be generated.
       },
       {
         name: ["Lee Janzen-Morel", "(They/Them)"],
-        photo: imageTeamPerson2,
+        photo: images.imageTeamPerson2,
         // A default alt of "Photo of Team Person 2." will be generated.
       },
       {
         name: ["Christoph Bendix", "(He/Him)"],
-        photo: imageTeamPerson3,
+        photo: images.imageTeamPerson3,
         // A default alt of "Photo of Team Person 3." will be generated.
       },
     ]}
@@ -37,15 +64,17 @@ Talk calmly, when you're ready.
 
 
 <ProjectImagesBlock
-    image={{
-        src: lateReply,
+    images={[
+        {
+        src: images.lateReply,
         alt: "A texting conversation: Christa says 'So sorry, I forgot to reply. Hey could you please send me the link to that website Mr. Smith was talking about?' A little while later she asks 'you there?' The person responds this time, saying 'oh hey, sorry for the late reply on my end too. I'm just so forgetful!'",
-    }}
+        }
+    ]}
     caption={
         "Forgetting to reply for too long can harm our relationships or make us miss urgent deadlines."
     }
     width={6}
-    maxHeight={"400px"}
+    maxHeight={"400"}
 >
 
 #### MindMii helps you go beyond reading text messages to replying!
@@ -61,19 +90,19 @@ Our initial project concept came from an identified need within our social circl
 <ProjectImagesBlock
     images={[
         {
-            src: brenda,
+            src: images.brenda,
             alt: "A cartoon woman with purple hair and a teal t-shirt appears next to some information. 'Brenda, overbooked professional, occupation: corporate strategist, fashionista, gamer. Personality: extroverted, analytical, busy, organized, team player, active, balances safety with risk.'",
             caption: "Brenda is a high-profile corporate strategist known for navigating the fast-paced world of business with precision.",
         },
         {
-            src: ava,
+            src: images.ava,
             alt: "A cartoon person with black hair and a beard wearing a teal jacket appears next to some information.'Ava, nuerodivergent, occupation: hyper focus (bugs? art? bug art?), highly distractable, 'in-person' kind of person. Personality: introverted, creative, busy, messy, independent, active, risky.'",
             caption: "Ava is a talented graphic designer with a flair for creativity and a diagnosis of ADHD.",
         },
     ]}
     direction={"column"}
-    width={4}
-    maxHeight={"400px"}
+    width={3}
+    maxHeight={"400"}
 >
 
 We interviewed six individuals struggling with messaging responses to explore their texting habits. Three of these individuals participated in three-day contextual inquiries, detailing their past month's texting history. The other three participated in a three-day anonymous diary study. From the data gathered, we identified distinct themes and created two unique personas to better describe these trends.
@@ -115,11 +144,11 @@ The contextual inquiry approach was used to observe day-to-day mobile phone use,
 <ProjectImagesBlock
     images={[
         {
-            src: paperPhone,
+            src: images.paperPhone,
             alt: "A paper prototype of the phone text messaging app with features to help with our tasks.",
         },
         {
-            src: paperWatch,
+            src: images.paperWatch,
             alt: "A paper prototype of the watch companion app with features to help with our tasks.",
         },
     ]}
@@ -127,8 +156,8 @@ The contextual inquiry approach was used to observe day-to-day mobile phone use,
     caption={
         "The second revision of the paper prototype, including clearer signifiers for notifications and help available earlier in the messaging process."
     }
-    width={8}
-    maxHeight={"400px"}
+    width={4}
+    maxHeight={"400"}
 >
 
 We explored solutions based on our research to develop MindMii, a mobile app and companion watch app. These paper prototypes focus on two main tasks supporting message management that support remembering and responding. These two tasks are:
@@ -149,11 +178,11 @@ Our iterative design process revealed key insights which supported continued des
 <ProjectImagesBlock
     images={[
         {
-            src: paperClock1,
+            src: images.paperClock1,
             alt: "A paper prototype watch face showing the time and green ring.",
         },
         {
-            src: paperClock2,
+            src: images.paperClock2,
             alt: "A paper prototype watch face showing the time, and green ring with the MindMii logo, and bold text saying URGENT.",
         },
     ]}
@@ -161,8 +190,8 @@ Our iterative design process revealed key insights which supported continued des
     caption={
         "The right-hand image shows the original paper prototype next to the third final paper prototype where the notification ring indicates it is a MindMii reminder with a logo."
     }
-    width={6}
-    maxHeight={"400px"}
+    width={4}
+    maxHeight={"400"}
 >
 
 An issue identified from user testing was confusion about how to interact with the watch notification which appears as a color ring. This confusion was identified by participant feedback during paper prototype testing, when they wanted to know what to do about the color ring and weren't sure if or how to suppress or interact with the notification. To support this issue, we added a bell icon to the color ring which provides a signifier to the to the user indicating that this is a notification, following conventions in this design space.
@@ -171,11 +200,11 @@ An issue identified from user testing was confusion about how to interact with t
 <ProjectImagesBlock
     images={[
         {
-            src: paperWatchUrgent1,
+            src: images.paperWatchUrgent1,
             alt: "A paper prototype watch face showing the a phone contact with a solid triangle behind it.",
         },
         {
-            src: paperWatchUrgent2,
+            src: images.paperWatchUrgent2,
             alt: "A paper prototype watch face showing the a phone contact named Sue and bold text saying URGENT.",
         },
     ]}
@@ -184,7 +213,7 @@ An issue identified from user testing was confusion about how to interact with t
         "The right-hand image shows the original paper prototype next to the third final paper prototype where urgent is marked for better clarity and the contact name is included."
     }
     width={6}
-    maxHeight={"400px"}
+    maxHeight={"400"}
 >
 
 During each of our 3 user tests we received questions regarding the style used to indicate an urgent massage. We decided to use words for the final paper prototype to remove any unclear understandings and lack of conventions regarding color coding.
@@ -196,11 +225,11 @@ During each of our 3 user tests we received questions regarding the style used t
 <ProjectImagesBlock
     images={[
         {
-            src: aiComposePaperOriginal,
+            src: images.aiComposePaperOriginal,
             alt: "MindMii's AI assistive reply feature provides a small selection of pre-generated responses.",
         },
         {
-            src: aiComposePaper,
+            src: images.aiComposePaper,
             alt: "MindMii's AI assistive reply feature asks the user how they can help reply to the message.",
         },
     ]}
@@ -209,7 +238,7 @@ During each of our 3 user tests we received questions regarding the style used t
         "The right-hand image showing our final design offers help based on what is asked in open-format, rather than default offering a suggested selection of potential replies."
     }
     width={6}
-    maxHeight={"400px"}
+    maxHeight={"400"}
 >
 
 Our original suggestive response feature only provided texting suggestions and did not provide other types of help, an issue uncovered during a paper prototype interaction with participants. They found this issue when they performed the task of "identifying and responding to a missed message". The participant wanted send a different message than the options provided by MindMii's suggestive text. We expanded our suggestive text helper to one that provides general help features by accepting a prompt and allowing for regeneration of suggestions.
@@ -219,15 +248,17 @@ Our original suggestive response feature only provided texting suggestions and d
 ### More action options should be provided in more places.
 
 <ProjectImagesBlock
-    image={{
-        src: paperReplyAssist,
+    images={[
+        {
+        src: images.paperReplyAssist,
         alt: "The MindMii paper prototype watch face on a reply screen showing a text 'how are you?'",
-    }}
+        }
+    ]}
     caption={
         "By offering response assistance outside of opening a message we reduce some response anxiety that is cause by fear of 'leaving someone on read.'"
     }
     width={4}
-    maxHeight={"400px"}
+    maxHeight={"400"}
 >
 
 The initial MindMii prototype's message response interface focused heavily on replying without offering other options such as accessing help or suggestions. This was an issue uncovered through paper prototype testing by participants. The ability to access features like help was buried too deeply in our design and needed to be hoisted into the earlier phases of the interaction. We noticed based on feedback that more types of help should be provided in addition to increased access to help and AI suggestions. We added assistive buttons to the text screen to provide help as an alternative to drafting a response.
@@ -241,34 +272,34 @@ The initial MindMii prototype's message response interface focused heavily on re
 <ProjectImagesBlock
     images={[
         {
-            src: mainScreen,
+            src: images.mainScreen,
             alt: "The main screen of the MindMii app, showing a list of texting conversations marked as urgent, unresponded, or responded.",
             caption: "Step 1: Mobile app is opened.",
         },
         {
-            src: messages,
+            src: images.messages,
             alt: "An open texting conversation in the MindMii app, showing the featured taskbar with special AI integration.",
             caption: "Step 2: Missed message selected.",
         },
                 {
-            src: aiComposePrompt,
+            src: images.aiComposePrompt,
             alt: "A popup on the screen asking how MindMii can help with AI assist.",
             caption: "Step 3: Unsure how to reply, so AI message selected.",
         },
         {
-            src: aiComposeResponse,
+            src: images.aiComposeResponse,
             alt: "The popup has minimized to the bottom of the screen with a suggested texting reply selected.",
             caption: "Step 4: AI offers a suggested message reply.",
         },
         {
-            src: finalResponse,
+            src: images.finalResponse,
             alt: "Returns to the message conversation, now showing a reply message.",
             caption: "Step 5: Suggestion is selected, populates to text.",
         },
     ]}
     direction={"row"}
-    width={100}
-    maxHeight={"400px"}
+    width={1}
+    maxHeight={"400"}
 >
 
 </ProjectImagesBlock>
@@ -280,48 +311,56 @@ The message hub now follows conventions from iOS and watchOS, notably the watch 
 ### Respond to a Message in an Appropriate Amount of Time
 
 <ProjectImagesBlock
-    image={{
-        src: watchOne,
+    images={[
+        {
+        src: images.watchOne,
         alt: "The MindMii watch face showing the screens for the steps described to the left.",
-    }}
+        }
+    ]}
     width={4}
-    maxHeight={"400px"}
+    maxHeight={"400"}
 >
 
 Initially, there's an urgent message notification, but it gets snoozed by the person because of other pressing tasks demanding their attention.
 
 </ProjectImagesBlock>
 <ProjectImagesBlock
-    image={{
-        src: watchTwo,
+    images={[
+        {
+        src: images.watchTwo,
         alt: "The MindMii watch face showing the screens for the steps described to the left.",
-    }}
+        }
+    ]}
     width={4}
-    maxHeight={"400px"}
+    maxHeight={"400"}
 >
 
 After a brief period, the AI detects that the message has a sensitive response deadline. The snooze expires after five minutes. Both the AI and the person acknowledge the urgency of the message, prompted by the reminder.
 
 </ProjectImagesBlock>
 <ProjectImagesBlock
-    image={{
-        src: watchThree,
+    images={[
+        {
+        src: images.watchThree,
         alt: "The MindMii watch face showing the screens for the steps described to the left.",
-    }}
+        }
+    ]}
     width={4}
-    maxHeight={"400px"}
+    maxHeight={"400"}
 >
 
 The person taps on the contact icon within the notification to access the message. Upon entering the reply mode, they notice an option for the suggestive AI mode.
 
 </ProjectImagesBlock>
 <ProjectImagesBlock
-    image={{
-        src: watchFour,
+    images={[
+        {
+        src: images.watchFour,
         alt: "The MindMii watch face showing the screens for the steps described to the left.",
-    }}
+        }
+    ]}
     width={4}
-    maxHeight={"400px"}
+    maxHeight={"400"}
 >
 
 Using the keyboard, the person drafts a response to the message. Upon completion, they hit "send," delivering the response directly to the messaging platform from which the original message originated.
