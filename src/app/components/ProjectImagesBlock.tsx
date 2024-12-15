@@ -15,11 +15,13 @@ interface ProjectImagesBlockProps {
 
 const ProjectImagesBlock: React.FC<ProjectImagesBlockProps> = ({ images, direction = 'row', width, maxHeight }) => {
   return (
-    <div className={`project-images-block flex-${direction === 'column' ? 'flex-col' : 'flex-row'} gap-4`} style={{ maxWidth: `${width * 100}px`, maxHeight }}>
+    <div className={`project-images-block flex ${direction === 'row' ? 'flex-col' : 'flex-row'}`} style={{ maxHeight }}>
       {images.map((image, index) => (
-        <div key={index} className={`image-container flex flex-${direction} gap-2`}>
-          <Image src={image.src} alt={image.alt} width={width * 100} height={400} className="image" />
-          <p className="block w-full overflow-hidden text-ellipsis whitespace-nowrap">{image.caption}</p>
+        <div key={index} className={`flex ${direction === 'row' ? 'flex-col' : 'flex-row'} gap-2`} style={{ maxWidth: `${width * 100/ images.length + 50}px` }}>
+          <div className="image-container block">
+            <Image src={image.src} alt={image.alt} width={width * 100} height={400} className="image" />
+            <p className={`inline w-${width * 100} overflow-none whitespace`}>{image.caption}</p>
+          </div>
         </div>
       ))}
     </div>
