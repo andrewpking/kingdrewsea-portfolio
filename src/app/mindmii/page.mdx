@@ -1,5 +1,11 @@
-import ProjectImageBlock from "../../components/ProjectImageBlock";
-import ProjectTeamGallery from "../../components/ProjectTeamGallery";
+import ProjectImagesBlock from "../components/ProjectImagesBlock";
+import ProjectTeamGallery from "../components/ProjectTeamGallery";
+
+
+// Photo resources:
+import imageTeamPerson1 from "public/Drew.png";
+import imageTeamPerson2 from "public/Lee.jpg";
+import imageTeamPerson3 from "public/Chris.jpg";
 
 # MindMii
 
@@ -30,7 +36,7 @@ Talk calmly, when you're ready.
 ## Problem and Design Overview
 
 
-<ProjectImageBlock
+<ProjectImagesBlock
     image={{
         src: lateReply,
         alt: "A texting conversation: Christa says 'So sorry, I forgot to reply. Hey could you please send me the link to that website Mr. Smith was talking about?' A little while later she asks 'you there?' The person responds this time, saying 'oh hey, sorry for the late reply on my end too. I'm just so forgetful!'",
@@ -46,7 +52,7 @@ Talk calmly, when you're ready.
 
 Missed communication poses a real problem for people who use smartphones with real costs. Not only do people feel disconnected; missed messages can seriously strain relationships. We've all been there, life gets crazy busy, and before we know it, we've left someone hanging without a reply. It is frustrating for both parties and can leave us wondering what went wrong. This issue is exacerbated by the nuanced nature of digital communication. The ideal timing of our responses is influenced by various factors including: the closeness of our relationships, urgency of the matter, and proximity to each other.
 
-</ProjectImageBlock>
+</ProjectImagesBlock>
 
 ## Design Research Process and Key Insights
 
@@ -212,7 +218,7 @@ Our original suggestive response feature only provided texting suggestions and d
 
 ### More action options should be provided in more places.
 
-<ProjectImageBlock
+<ProjectImagesBlock
     image={{
         src: paperReplyAssist,
         alt: "The MindMii paper prototype watch face on a reply screen showing a text 'how are you?'",
@@ -226,7 +232,7 @@ Our original suggestive response feature only provided texting suggestions and d
 
 The initial MindMii prototype's message response interface focused heavily on replying without offering other options such as accessing help or suggestions. This was an issue uncovered through paper prototype testing by participants. The ability to access features like help was buried too deeply in our design and needed to be hoisted into the earlier phases of the interaction. We noticed based on feedback that more types of help should be provided in addition to increased access to help and AI suggestions. We added assistive buttons to the text screen to provide help as an alternative to drafting a response.
 
-</ProjectImageBlock>
+</ProjectImagesBlock>
 
 ## Resulting Design
 
@@ -273,7 +279,7 @@ The message hub now follows conventions from iOS and watchOS, notably the watch 
 
 ### Respond to a Message in an Appropriate Amount of Time
 
-<ProjectImageBlock
+<ProjectImagesBlock
     image={{
         src: watchOne,
         alt: "The MindMii watch face showing the screens for the steps described to the left.",
@@ -284,8 +290,8 @@ The message hub now follows conventions from iOS and watchOS, notably the watch 
 
 Initially, there's an urgent message notification, but it gets snoozed by the person because of other pressing tasks demanding their attention.
 
-</ProjectImageBlock>
-<ProjectImageBlock
+</ProjectImagesBlock>
+<ProjectImagesBlock
     image={{
         src: watchTwo,
         alt: "The MindMii watch face showing the screens for the steps described to the left.",
@@ -296,8 +302,8 @@ Initially, there's an urgent message notification, but it gets snoozed by the pe
 
 After a brief period, the AI detects that the message has a sensitive response deadline. The snooze expires after five minutes. Both the AI and the person acknowledge the urgency of the message, prompted by the reminder.
 
-</ProjectImageBlock>
-<ProjectImageBlock
+</ProjectImagesBlock>
+<ProjectImagesBlock
     image={{
         src: watchThree,
         alt: "The MindMii watch face showing the screens for the steps described to the left.",
@@ -308,8 +314,8 @@ After a brief period, the AI detects that the message has a sensitive response d
 
 The person taps on the contact icon within the notification to access the message. Upon entering the reply mode, they notice an option for the suggestive AI mode.
 
-</ProjectImageBlock>
-<ProjectImageBlock
+</ProjectImagesBlock>
+<ProjectImagesBlock
     image={{
         src: watchFour,
         alt: "The MindMii watch face showing the screens for the steps described to the left.",
@@ -320,7 +326,7 @@ The person taps on the contact icon within the notification to access the messag
 
 Using the keyboard, the person drafts a response to the message. Upon completion, they hit "send," delivering the response directly to the messaging platform from which the original message originated.
 
-</ProjectImageBlock>
+</ProjectImagesBlock>
 
 Examining our other task to respond to a message in an appropriate amount of time, our scenario has MindMii notifying the person of an urgent message from earlier that needs a reply soon. The person decides to snooze the message since they are busy, but the app AI recognizes this message is time-sensitive and limits the snooze to five minutes. Following this, it re-prompts the person about this message and they realize the urgency of the message.
 

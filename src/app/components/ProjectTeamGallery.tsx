@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+const defaultPhoto = '/images/default-photo.jpg'; // Path to your default photo
+
 interface Member {
   name: string[];
   photo: string;
@@ -15,7 +17,7 @@ const ProjectTeamGallery: React.FC<ProjectTeamGalleryProps> = ({ members }) => {
       {members.map((member, index) => (
         <div key={index} className="team-member">
           <Image
-            src={member.photo}
+            src={member.photo || defaultPhoto}
             alt={`Photo of ${member.name[0]}.`}
             className="team-member-photo"
           />

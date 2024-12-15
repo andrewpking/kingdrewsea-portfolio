@@ -12,13 +12,13 @@ export default function Home() {
               {/* <Link href="/pages/high-speed-rail">High Speed Rail</Link> */}
             </li>
             <li>
-              <Link href="/pages/mindmii">MindMii</Link>
+              <Link href="/mindmii">MindMii</Link>
             </li>
             <li>
               {/* <Link href="/pages/resitogether">ResiTogether</Link> */}
             </li>
             <li>
-              <Link href="/pages/kbcs">KBCS Theme</Link>
+              <Link href="/kbcs">KBCS Theme</Link>
             </li>
             <li>
               {/* <Link href="/pages/sl-screens">SL Screens</Link> */}
