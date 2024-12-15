@@ -3,38 +3,61 @@ import Image from 'next/image';
 interface ImageProps {
   src: string;
   alt: string;
-  caption: string;
+  caption?: string;
 }
 
 interface ProjectImagesBlockProps {
   images: ImageProps[];
   direction?: 'row' | 'column';
   width: number;
-  maxHeight: string;
+  maxHeight: number;
+  caption?: string;
+  children?: ReactNode;
 }
 
 const ProjectImagesBlock: React.FC<ProjectImagesBlockProps> = ({ images, direction = 'row', width, maxHeight, caption, children }) => {
   return (
-    <div className="flex flex-row gap-4">
-      <section className={`inline-flex flex-col mb-4 `} style={{maxHeight: `${maxHeight + 200} px`, maxWidth: `${width * 100 * images.length + 50} px`}}>
-        <div className={`inline-flex ${direction === 'row' ? 'flex-row' : 'flex-col'} mb-4 `} style={{maxHeight: `${maxHeight} px`, maxWidth: `${width * 100 * images.length + 50} px`}}>
+    <div className="w-full max-w-7xl mx-auto flex flex-row gap-8">
+      <section className="flex-1">
+        <div className={`grid gap-6 ${
+          direction === 'row' 
+            ? `grid-cols-1 ${
+                images.length > 1 ? 'md:grid-cols-2' : ''
+              } ${
+                images.length > 2 ? 'lg:grid-cols-3' : ''
+              }`
+            : 'grid-cols-1'
+        }`}>
           {images.map((image, index) => (
-            <div key={index} className={`image-container flex flex-col p-4`} style={{ maxWidth: `${width * 100+ 50 }px` }}>
-              <Image src={image.src} alt={image.alt} width={width * 100} height={400} className="border image" style={{ maxWidth: `${width * 100+ 50 }px`}} />
-              {image.caption && <p className={`float-left w-${width * 100} whitespace italic small mb-2`}>{image.caption}</p>}
+            <div key={index} 
+                 className={`flex flex-col space-y-2 ${
+                   direction === 'column' ? 'mb-6' : ''
+                 }`}>
+              <div className="w-full" style={{ maxWidth: `${width * 100}px` }}>
+                <Image 
+                  src={image.src} 
+                  alt={image.alt}
+                  width={width * 100}
+                  height={maxHeight}
+                  className="rounded-lg w-full"
+                />
+              </div>
+              {image.caption && (
+                <p className="text-sm italic text-gray-200">{image.caption}</p>
+              )}
             </div>
           ))}
         </div>
-        <div className="block clear-both">
-          <p className={`float-left w-${width * 100} whitespace italic small mb-2`}>{caption}</p>
-        </div>
+        {caption && (
+          <p className="mt-4 text-sm italic text-gray-200">{caption}</p>
+        )}
       </section>
-
-      <div className="children-container inline float-right p-4">
-        {children}
-      </div>
+      {children && (
+        <div className="flex-1">
+          {children}
+        </div>
+      )}
     </div>
-
   );
 };
 
