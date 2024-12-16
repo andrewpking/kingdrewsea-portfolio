@@ -38,6 +38,25 @@ $color-pallete: (
     background-color: rgba($color, $opacity);
 }
 
+// Header styles
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    @include bg-opacity(get-color('light', 'grey-100'), 0.9);
+}
+
+header a {
+    color: get-color('light', 'primary');
+}
+
+header a:hover {
+    color: get-color('light', 'accent');
+}
+
 // Usage in your styles
 body {
     background-color: get-color('light', 'grey-100');
@@ -99,6 +118,18 @@ main.project-page ul, li {
 }
 
 @media (prefers-color-scheme: dark) {
+    header {
+       @include bg-opacity(get-color('dark', 'grey-100'), 0.9);
+    }
+
+    header a {
+        color: get-color('dark', 'primary');
+    }
+    
+    header a:hover {
+        color: get-color('dark', 'accent');
+    }
+
     body {
         background-color: get-color('dark', 'grey-100');
         color: get-color('dark', 'grey-900');
