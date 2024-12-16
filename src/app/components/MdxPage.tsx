@@ -35,10 +35,10 @@ const MdxPage: React.FC<MdxPageProps> = ({ metadata, children }) => {
                     />
                     <div className="absolute inset-0 overlay"></div>
                     <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
-                        <h1 className="text-4xl font-bold z-10">
+                        <h1 className="text-4xl font-bold">
                             {metadata.title}
                         </h1>
-                        <p className="text-white z-10 text-center">
+                        <p className="text-white text-center">
                             {metadata.description}
                         </p>
                     </div>
