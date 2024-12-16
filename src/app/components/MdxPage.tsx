@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Header from './Header';
 import '../styles.scss';
 
 interface Metadata {
@@ -21,6 +22,7 @@ const MdxPage: React.FC<MdxPageProps> = ({ metadata, children }) => {
                 <title>{metadata.title}</title>
                 <meta name="description" content={metadata.description} />
             </Head>
+            <Header />
             <main className="project-page">
                 <div className="relative">
                     <Image 
