@@ -53,6 +53,15 @@ header a:hover {
     transition: background-color 0.3s ease-in-out;
 }
 
+.image-head-container p {
+    font-size: 1.25em;
+    color: map-get(map-get($color-pallete, 'light'), 'grey-900');
+}
+
+.image-head-container h1 {
+    color: map-get(map-get($color-pallete, 'light'), 'secondary');
+}
+
 // Usage in your styles
 body {
     background-color: map-get(map-get($color-pallete, 'light'), 'grey-100');
@@ -67,7 +76,7 @@ main.project-page {
 }
 
 .overlay {
-    background-color: rgba(map-get(map-get($color-pallete, 'light'), 'grey-100'), 0.7);
+    background-color: rgba(map-get(map-get($color-pallete, 'light'), 'grey-100'), 0.85);
 }
 
 h1 {
@@ -130,6 +139,14 @@ main.project-page ul, li {
         background-color: rgba(map-get(map-get($color-pallete, 'dark'), 'grey-100'), 0.8);
     }
 
+    .image-head-container p {
+        color: map-get(map-get($color-pallete, 'dark'), 'grey-900');
+    }
+
+    .image-head-container h1 {
+        color: map-get(map-get($color-pallete, 'dark'), 'secondary');
+    }
+
     body {
         background-color: map-get(map-get($color-pallete, 'dark'), 'grey-100');
         color: map-get(map-get($color-pallete, 'dark'), 'grey-900');
@@ -140,7 +157,7 @@ main.project-page ul, li {
     }
 
     .overlay {
-        background-color: rgba(map-get(map-get($color-pallete, 'dark'), 'grey-100'), 0.7);
+        background-color: rgba(map-get(map-get($color-pallete, 'dark'), 'grey-100'), 0.85);
     }
 
     h1 {
