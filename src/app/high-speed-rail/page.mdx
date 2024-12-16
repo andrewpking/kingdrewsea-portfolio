@@ -1,0 +1,53 @@
+import MdxPage from '../components/MdxPage'
+import TrainBuilderDashboard from './components/Dashboard'
+import TableBuilder from './components/TableBuilder'
+import { GraphProvider } from './components/GraphContext'
+import '../styles.scss'
+
+export const metadata = {
+  title: 'High Speed Rail',
+  description: 'Reimagining the Future of Travel',
+  image: '/images/high-speed-rail-cover.png',
+  imageAlt: 'A screenshot of the High Speed Rail project, showing a map of the United States with a train route drawn on it.'
+};
+
+<MdxPage metadata={metadata}>
+
+The High Speed Rail project is a concept for a high-speed rail system in the United States. The goal of the project is to provide a fast, efficient, and sustainable mode of transportation that connects major cities across the country.
+
+The project envisions a network of high-speed trains that travel at speeds of up to 300 miles per hour, making it possible to travel between cities in a matter of hours. We estimated the ridership by analyzing the population density and distance between major cities in the United States.
+
+## Designing the System
+
+This data visualization shows the proposed high-speed rail routes connecting major cities in the United States. The routes are color-coded based to indicate groups of connected cities.
+
+<GraphProvider>
+
+<TrainBuilderDashboard />
+<TableBuilder />
+
+</GraphProvider>
+
+## Benefits of High-Speed Rail
+
+High-speed rail offers several benefits over other modes of transportation, including:
+
+- **Speed**: High-speed trains can travel at speeds of up to 300 miles per hour, making them faster than cars and airplanes for short to medium-distance trips.
+- **Efficiency**: High-speed rail is more energy-efficient than cars and airplanes, making it a more sustainable mode of transportation.
+- **Convenience**: High-speed rail stations are located in city centers, making them more convenient to access than airports.
+
+## The Future of Travel
+
+The High Speed Rail project is a vision for the future of travel in the United States. By providing a fast, efficient, and sustainable mode of transportation, high-speed rail has the potential to transform the way we travel and connect with each other.
+
+## How was this project built?
+
+This project was built by me from a concept Daniel Sutton created by using React, D3, React, and QGIS. The map was created using QGIS, an open-source geographic information system, to visualize the train routes and cities and exported as a TopoJSON file.
+
+The data was prepared using R to create a list of combined statistical areas (CSAs), their populations, the most populous city in each CSA, and the distance between the most populous city and the other most populous cities in other CSA's.
+
+The project was built using React, a JavaScript library for building user interfaces, and styled using Tailwind CSS. The data visualization was created using D3.js, a JavaScript library for creating interactive data visualizations.
+
+Behind the scenes, the project uses a combination of React hooks and context to manage the state of the application and pass data between components. The data is managed by a graph data structure that represents the train routes and cities, and the visualization is updated in real-time as the user interacts with the map.
+
+</MdxPage>
