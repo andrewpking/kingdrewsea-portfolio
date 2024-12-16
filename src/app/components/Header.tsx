@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { GiHamburgerMenu } from "react-icons/gi";
 
+
+// Credit to https://daily-dev-tips.com/posts/how-to-use-react-icons-in-nextjs/
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
