@@ -56,16 +56,24 @@ export default function Header() {
                 </nav>
             </div>
 
-            {/* Mobile menu */}
-            <div className={`
-                fixed inset-0 bg-black bg-opacity-50 transition-opacity xs:hidden
-                ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}
-            `} onClick={() => setIsOpen(false)} />
+            {/* Mobile menu overlay */}
+            <div 
+                className={`
+                    fixed inset-0 bg-black bg-opacity-50 transition-opacity xs:hidden
+                    ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}
+                `}
+                onClick={() => setIsOpen(false)}
+                hidden={!isOpen}
+            />
 
-            <aside className={`
-                fixed top-0 left-0 w-64 h-full transform transition-transform xs:hidden
-                ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-            `}>
+            {/* Mobile menu panel */}
+            <aside 
+                className={`
+                    fixed top-0 left-0 w-64 h-full transform transition-transform xs:hidden
+                    ${isOpen ? 'translate-x-0' : '-translate-x-full'}
+                `}
+                hidden={!isOpen}
+            >
                 <nav className="h-full pt-16 pb-4 px-4">
                     <ul className="space-y-2">
                         {links.map((link) => (
