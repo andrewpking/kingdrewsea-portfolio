@@ -80,6 +80,10 @@ p {
     color: get-color('light', 'grey-700');
 }
 
+main.project-page a {
+    color: get-color('light', 'primary');
+}
+
 main.project-page ul {
     list-style-type: disc;
     padding: 0;
@@ -114,5 +118,9 @@ main.project-page ul, li {
 
     p {
         color: get-color('dark', 'grey-700');
+    }
+
+    main.project-page a {
+        color: get-color('dark', 'primary');
     }
 }
