@@ -38,7 +38,7 @@ const TrainbuilderDashboard = () => {
               </div>
               <TableBuilder />
           </div>
-          <div className='tiny:h-[50vh] xs:h-[60vh] sm:h-[70vh] md:h-[90vh] md:w-full'>
+          <div className='tiny:h-[50vh] xs:h-[60vh] sm:h-[70vh] md:h-[90vh] md:w-full xl:h-auto'>
             <USMapRenderer
                   threshold={maxSize}
                 />
