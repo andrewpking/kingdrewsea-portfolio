@@ -24,13 +24,13 @@ const MdxPage: React.FC<MdxPageProps> = ({ metadata, children }) => {
             </Head>
             <Header />
             <main className="project-page">
-                <div className="relative mt-20">
+                <div className="image-head-container relative mt-20">
                     <Image 
                         src={metadata.image} 
                         alt={metadata.imageAlt} 
                         width={1120} 
                         height={150}
-                        className="w-full h-[250px] tiny:h-[350px] xs:h-[300px] sm:h-[200px] md:h-[150px] object-cover"
+                        className="w-full h-[250px] md:h-[200px] object-cover"
                         priority
                     />
                     <div className="absolute inset-0 overlay"></div>
@@ -38,11 +38,16 @@ const MdxPage: React.FC<MdxPageProps> = ({ metadata, children }) => {
                         <h1 className="text-4xl font-bold">
                             {metadata.title}
                         </h1>
-                        <p className="text-white text-center">
+                        <p className="hidden md:block text-center">
                             {metadata.description}
                         </p>
                     </div>
                 </div>
+
+                {/* Visible only on screens smaller than md */}
+                <p className="md:hidden text-center px-4 py-6">
+                    {metadata.description}
+                </p>
                 {children}
             </main>
         </>
