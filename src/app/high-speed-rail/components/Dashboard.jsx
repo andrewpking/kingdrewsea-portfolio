@@ -16,7 +16,7 @@ const TrainbuilderDashboard = () => {
         <GraphProvider>
           <div className='flex flex-col items-center'>
             {/* Slider */}
-              <div className="relative flex flex-col items-center mt-20">
+              <div className="tiny:block sm:relative sm:flex flex-col items-center md:mt-20">
                 <p className="text-lg font-semibold">
                   High Speed Rail Ridership
                 </p>
@@ -38,7 +38,7 @@ const TrainbuilderDashboard = () => {
               </div>
               <TableBuilder />
           </div>
-          <div className='w-full'>
+          <div className='tiny:h-[50vh] xs:h-[60vh] sm:h-[70vh] md:h-[90vh] md:w-full'>
             <USMapRenderer
                   threshold={maxSize}
                 />
