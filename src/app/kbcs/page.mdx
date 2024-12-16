@@ -1,15 +1,19 @@
+import MdxPage from '../components/MdxPage'
 import '../styles.scss'
 
-<main className="project-page">
-# KBCS Theme
+export const metadata = {
+  title: 'KBCS Theme',
+  description: 'The KBCS Accessibility Proposal aims to make the KBCS website a more welcoming and accessible space for all abilities. The project focuses on improving the website’s design and usability by following modern accessibility standards and best practices. This effort shows KBCS\'s dedication to service its diverse audience by ensuring everyone can fully access and enjoy the website.',
+  image: '/images/KBCS_Menu-Bar_Flow.png',
+  imageAlt: 'some alt text'
+}
 
+<MdxPage metadata={metadata}>
 By [Sama Khalid][1], [Drew King][2], [Colin Xiao][3], and [Sophia Lin][4]
 
 ## Introduction
 
-The KBCS Accessibility Proposal aims to make the [KBCS website][5] a more welcoming and accessible space for all abilities. The project focuses on improving the website’s design and usability by following modern accessibility standards and best practices. This effort shows KBCS's dedication to service its diverse audience by ensuring everyone can fully access and enjoy the website.
-
-Many websites, including KBCS, struggle to meet accessibility standards. One reason is the [43.7% of websites are built in WordPress][6] and many WordPress themes are not designed to be accessible. This makes it harder for people with disabilities to use these websites, even if the content itself is accessible. To address this, the KBCS team decided not to wait for help from Bellevue College IT. Instead, Drew took the lead in updating the WordPress theme to make it more accessible while meting the specific needs of KBCS.
+Many websites, including [KBCS.fm][5], struggle to meet accessibility standards. One reason is the [43.7% of websites are built in WordPress][6] and many WordPress themes are not designed to be accessible. This makes it harder for people with disabilities to use these websites, even if the content itself is accessible. To address this, the KBCS team decided not to wait for help from Bellevue College IT. Instead, Drew took the lead in updating the WordPress theme to make it more accessible while meting the specific needs of KBCS.
 
 The project includes updating [KBCS WordPress theme][7] and creating clear accessibility guidelines for staff. The team used `PHP`, `HTML/CSS`, and `JavaScript` to make these changes, ensuring the project is practical and achievable. By working together and reviewing each other's work, the team created a better website and helpful resources for staff to create accessible content in the future. This project is an important step toward making the KBCS website a more inclusive space for everyone. The [KBCS website with improved accessibility][8] is currently being staged for review by Bellevue College IT.
 
@@ -134,4 +138,4 @@ Ultimately, we aspire to make a tangible impact in the real world by contributin
 
 [image-1]: /public/images/KBCS_Menu-Bar_Flow.png "Figure 1"
 
-</main>
+</MdxPage>
