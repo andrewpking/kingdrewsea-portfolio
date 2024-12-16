@@ -1,6 +1,16 @@
 import ProjectImagesBlock from "../components/ProjectImagesBlock";
 import ProjectTeamGallery from "../components/ProjectTeamGallery";
+import Head from 'next/head';
+import Image from 'next/image';
+import MdxPage from '../components/MdxPage';
 import '../styles.scss';
+
+export const metadata = {
+  title: "MindMii",
+  description: "Talk calmly, when you're ready.",
+  image: "/images/mindmii/MindMii_Cover.png",
+  imageAlt: "MindMii logo"
+}
 
 export const images = {
   imageTeamPerson1: "/images/mindmii/Drew.png",
@@ -34,12 +44,7 @@ export const images = {
   watchFour: "/images/mindmii/watch_4.png",
 };
 
-<main className="project-page">
-
-# MindMii
-
-Talk calmly, when you're ready.
-
+<MdxPage metadata = {metadata}>
 ## Team
 
   <ProjectTeamGallery
@@ -373,4 +378,4 @@ Examining our other task to respond to a message in an appropriate amount of tim
 
 The person opens the message and enters into reply mode. AI is there to support with suggestions, but the user composes a message of their own using the keyboard and presses send. The response is routed to the platform the message is native to. The notification is cleared from the lock screen. Messages are no longer forgotten with MindMii!
 
-</main>
+</MdxPage>
