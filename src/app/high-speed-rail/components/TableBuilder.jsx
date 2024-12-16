@@ -40,8 +40,8 @@ const TableBuilder = () => {
 
   return (
     <div className="items-center justify-center">
-      <h3 className='text-xl mb-2 mt-10'>High Speed Rail Network</h3>
-      <table className="min-w-full bg-white">
+      <h3 className='text-xl'>High Speed Rail Network</h3>
+      <table className="min-w-full">
         <thead>
           <tr>
             <th className="py-2">Rail Line</th>
