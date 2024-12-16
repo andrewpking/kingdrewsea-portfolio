@@ -33,6 +33,11 @@ $color-pallete: (
     @return map-get(map-get($color-pallete, $theme), $color);
 }
 
+// Opacity function
+@mixin bg-opacity($color, $opacity) {
+    background-color: rgba($color, $opacity);
+}
+
 // Usage in your styles
 body {
     background-color: get-color('light', 'grey-100');
@@ -44,6 +49,10 @@ main.project-page {
     max-width: 70rem;
     padding: 1.25rem;
     background-color: get-color('light', 'grey-100');
+}
+
+.overlay {
+    @include bg-opacity(get-color('light', 'grey-100'), 0.7);
 }
 
 h1 {
@@ -89,6 +98,10 @@ main.project-page ul, li {
 
     main.project-page {
         background-color: get-color('dark', 'grey-100');
+    }
+
+    .overlay {
+        @include bg-opacity(get-color('dark', 'grey-100'), 0.7);
     }
 
     h1 {
