@@ -30,6 +30,7 @@ export default function Header() {
     return (
         <header className="w-full shadow-sm fixed top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <p className='ml-2 text-center hidden md:block'>Drew King&apos;s Portfolio</p>
                 <nav className="flex items-center justify-between h-16">
                     {/* Mobile menu button */}
                     <button 
@@ -39,8 +40,7 @@ export default function Header() {
                     >
                         <GiHamburgerMenu className="h-6 w-6" />
                     </button>
-                    <p className='ml-2'>Drew King Portfolio</p>
-
+                    <p className='ml-2 text-center md:hidden'>Drew King&apos;s Portfolio</p>
                     {/* Desktop menu */}
                     <ul className="hidden md:flex space-x-8">
                         {links.map((link) => (
