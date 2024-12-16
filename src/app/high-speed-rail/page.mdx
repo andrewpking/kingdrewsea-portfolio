@@ -11,9 +11,7 @@ export const metadata = {
 
 <MdxPage metadata={metadata}>
 
-The High Speed Rail project is a concept for a high-speed rail system in the United States. The goal of the project is to provide a fast, efficient, and sustainable mode of transportation that connects major cities across the country.
-
-The project envisions a network of high-speed trains that travel at speeds of up to 300 miles per hour, making it possible to travel between cities in a matter of hours. We estimated the ridership by analyzing the population density and distance between major cities in the United States.
+The High Speed Rail project is a conceptual train builder for a high-speed rail system in the United States. The goal of the project is to provide a fast, efficient, and sustainable mode of transportation that connects major cities across the country. The project envisions a network of high-speed trains that travel at speeds of up to 300 miles per hour, making it possible to travel between cities in a matter of hours. We estimated the ridership by analyzing the population density and distance between major cities in the United States.
 
 ## Designing the System
 
@@ -35,12 +33,16 @@ The High Speed Rail project is a vision for the future of travel in the United S
 
 ## How was this project built?
 
-This project was built by me from a concept Daniel Sutton created by using React, D3, React, and QGIS. The map was created using QGIS, an open-source geographic information system, to visualize the train routes and cities and exported as a TopoJSON file.
+### Data Prep
 
-The data was prepared using R to create a list of combined statistical areas (CSAs), their populations, the most populous city in each CSA, and the distance between the most populous city and the other most populous cities in other CSA's.
+This project was built by me from a concept Daniel Sutton created by using React, D3, React, and QGIS. The map was created using QGIS, an open-source geographic information system, to visualize the train routes and cities and exported as a TopoJSON file. The data was prepared using R to create a list of combined statistical areas (CSAs), their populations, the most populous city in each CSA, and the distance between the most populous city and the other most populous cities in other CSA's.
 
-The project was built using React, a JavaScript library for building user interfaces, and styled using Tailwind CSS. The data visualization was created using D3.js, a JavaScript library for creating interactive data visualizations.
+### Development
 
-Behind the scenes, the project uses a combination of React hooks and context to manage the state of the application and pass data between components. The data is managed by a graph data structure that represents the train routes and cities, and the visualization is updated in real-time as the user interacts with the map.
+The project was built using React, a JavaScript library for building user interfaces, and styled using Tailwind CSS. The data visualization was created using D3.js, a JavaScript library for creating interactive data visualizations. Behind the scenes, the project uses a combination of React hooks and context to manage the state of the application and pass data between components. The data is managed by a graph data structure that represents the train routes and cities, and the visualization is updated in real-time as the user interacts with the map.
+
+### Deployment
+
+The [original High Speed Rail project](https://high-speed-rail-cse442-24au-fp-6a981c250f8bd8e994fe6608199c4157.pages.cs.washington.edu/) was deployed to gitlab pages with additional visualizations created by Joey Kreuger and styles by Jack Rosenbloom. We used a custom build script to generate the static files and deploy them to a web server using GitLab CI/CD.
 
 </MdxPage>
