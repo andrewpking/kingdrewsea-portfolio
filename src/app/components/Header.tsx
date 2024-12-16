@@ -29,19 +29,20 @@ export default function Header() {
 
     return (
         <header className="w-full shadow-sm fixed top-0 z-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
                 <nav className="flex items-center justify-between h-16">
                     {/* Mobile menu button */}
                     <button 
-                        className="xs:hidden"
+                        className="md:hidden"
                         onClick={() => setIsOpen(!isOpen)}
                         aria-label="Menu"
                     >
                         <GiHamburgerMenu className="h-6 w-6" />
                     </button>
+                    <p className='ml-2'>Drew King Portfolio</p>
 
                     {/* Desktop menu */}
-                    <ul className="hidden xs:flex space-x-8">
+                    <ul className="hidden md:flex space-x-8">
                         {links.map((link) => (
                             <li key={link.href}>
                                 <Link 
@@ -59,7 +60,7 @@ export default function Header() {
             {/* Mobile menu overlay */}
             <div 
                 className={`
-                    fixed inset-0 bg-black bg-opacity-50 transition-opacity xs:hidden
+                    fixed inset-0 bg-black bg-opacity-50 transition-opacity md:hidden
                     ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}
                 `}
                 onClick={() => setIsOpen(false)}
@@ -69,7 +70,7 @@ export default function Header() {
             {/* Mobile menu panel */}
             <aside 
                 className={`
-                    fixed top-0 left-0 w-64 h-full transform transition-transform xs:hidden
+                    mobile-menu fixed top-0 left-0 w-64 h-full transform transition-transform md:hidden
                     ${isOpen ? 'translate-x-0' : '-translate-x-full'}
                 `}
                 hidden={!isOpen}
