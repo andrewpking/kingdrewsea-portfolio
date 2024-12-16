@@ -45,9 +45,9 @@ const D3Map = ({ threshold }) => {
 
       // Setup tooltip
       const tltp = d3.select(tooltipRef.current)
+        .attr('class', 'tooltip')
         .style('position', 'fixed')
         .style('visibility', 'hidden')
-        .style('background-color', 'white')
         .style('padding', '10px')
         .style('border', '1px solid #ddd')
         .style('border-radius', '5px')

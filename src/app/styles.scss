@@ -124,6 +124,14 @@ main.project-page ul, li {
     margin-left: 0.75rem;
 }
 
+// Styles for d3 tooltip 
+.tooltip {
+    padding: 0.5rem;
+    background-color: map.get(map.get($color-pallete, 'light'), 'grey-100');
+    border: 1px solid map.get(map.get($color-pallete, 'light'), 'grey-200');
+    border-radius: 0.25rem;
+}
+
 @media (prefers-color-scheme: dark) {
     header {
         background-color: rgba(map.get(map.get($color-pallete, 'dark'), 'grey-100'), 0.9);
@@ -176,5 +184,10 @@ main.project-page ul, li {
 
     main.project-page a {
         color: map.get(map.get($color-pallete, 'dark'), 'primary');
+    }
+
+    .tooltip {
+        background-color: map.get(map.get($color-pallete, 'dark'), 'grey-100');
+        border: 1px solid map.get(map.get($color-pallete, 'dark'), 'grey-200');
     }
 }
