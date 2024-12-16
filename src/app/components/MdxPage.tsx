@@ -30,7 +30,7 @@ const MdxPage: React.FC<MdxPageProps> = ({ metadata, children }) => {
                         alt={metadata.imageAlt} 
                         width={1120} 
                         height={150}
-                        className="w-full h-[150px] object-cover"
+                        className="w-full h-[250px] tiny:h-[350px] xs:h-[300px] sm:h-[200px] md:h-[150px] object-cover"
                         priority
                     />
                     <div className="absolute inset-0 overlay"></div>
