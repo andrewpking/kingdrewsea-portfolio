@@ -9,6 +9,7 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
     const links = [
+        { href: "/home", text: "Home" },
         { href: "/high-speed-rail", text: "High Speed Rail" },
         { href: "/mindmii", text: "MindMii" },
         { href: "/resitogether", text: "ResiTogether" },

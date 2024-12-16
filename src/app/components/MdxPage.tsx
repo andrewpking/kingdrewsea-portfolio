@@ -24,7 +24,7 @@ const MdxPage: React.FC<MdxPageProps> = ({ metadata, children }) => {
             </Head>
             <Header />
             <main className="project-page">
-                <div className="image-head-container relative mt-20">
+                <div className="image-head-container relative md:mt-20 md:pt-4 sm:mt-12 sm:pt-0">
                     <Image 
                         src={metadata.image} 
                         alt={metadata.imageAlt} 
@@ -38,14 +38,14 @@ const MdxPage: React.FC<MdxPageProps> = ({ metadata, children }) => {
                         <h1 className="text-4xl font-bold">
                             {metadata.title}
                         </h1>
-                        <p className="hidden md:block text-center">
+                        <p className="hidden sm:block text-center">
                             {metadata.description}
                         </p>
                     </div>
                 </div>
 
                 {/* Visible only on screens smaller than md */}
-                <p className="md:hidden text-center px-4 py-6">
+                <p className="sm:hidden text-center px-4 py-6">
                     {metadata.description}
                 </p>
                 {children}
