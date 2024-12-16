@@ -24,7 +24,7 @@ const MdxPage: React.FC<MdxPageProps> = ({ metadata, children }) => {
             </Head>
             <Header />
             <main className="project-page">
-                <div className="relative">
+                <div className="relative mt-20">
                     <Image 
                         src={metadata.image} 
                         alt={metadata.imageAlt} 
