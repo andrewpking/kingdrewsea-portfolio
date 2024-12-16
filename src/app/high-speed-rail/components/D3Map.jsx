@@ -301,7 +301,7 @@ const D3Map = ({ threshold }) => {
   },[setGraph]);
 
   return (
-    <div className="relative w-full h-full">
+    <div className="w-full h-full">
       <svg ref={svgRef} className="w-full h-full"></svg>
       <div ref={tooltipRef} className="absolute"></div>
     </div>
