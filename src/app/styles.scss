@@ -80,6 +80,10 @@ p {
     color: get-color('light', 'grey-700');
 }
 
+main.project-page img {
+    margin: 1rem 0;
+}
+
 main.project-page a {
     color: get-color('light', 'primary');
 }
