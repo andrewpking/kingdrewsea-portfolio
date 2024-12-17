@@ -23,7 +23,7 @@ const ProjectImagesBlock: React.FC<ProjectImagesBlockProps> = ({ images, directi
         <div className={`grid gap-6 ${
           direction === 'row' 
             ? `grid-cols-1 ${
-                images.length > 1 ? 'sm:grid-cols-2' : ''
+                images.length > 1 ? 'xs:grid-cols-2' : ''
               } ${
                 images.length > 3 ? 'md:grid-cols-3' : ''
               } ${
