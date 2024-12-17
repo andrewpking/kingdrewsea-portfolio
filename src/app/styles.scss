@@ -64,7 +64,6 @@ header a:hover {
     color: map.get(map.get($color-pallete, 'light'), 'secondary');
 }
 
-// Usage in your styles
 body {
     background-color: map.get(map.get($color-pallete, 'light'), 'grey-100');
     color: map.get(map.get($color-pallete, 'light'), 'grey-900');
@@ -79,6 +78,14 @@ main, main.project-page {
 
 .overlay {
     background-color: rgba(map.get(map.get($color-pallete, 'light'), 'grey-100'), 0.85);
+}
+
+.card-content {
+    background-color: map.get(map.get($color-pallete, 'light'), 'grey-200');
+}
+
+.card-content p {
+    color: map.get(map.get($color-pallete, 'light'), 'grey-900');
 }
 
 h1 {
@@ -103,7 +110,7 @@ h4 {
 
 p {
     font-size: 1em;
-    color: map.get(map.get($color-pallete, 'light'), 'grey-700');
+    color: map.get(map.get($color-pallete, 'light'), 'grey-500');
 }
 
 main.project-page p {
@@ -173,6 +180,14 @@ main.project-page ul, li {
 
     .overlay {
         background-color: rgba(map.get(map.get($color-pallete, 'dark'), 'grey-100'), 0.85);
+    }
+
+    .card-content {
+        background-color: map.get(map.get($color-pallete, 'dark'), 'grey-200');
+    }
+
+    .card-content p {
+        color: map.get(map.get($color-pallete, 'dark'), 'grey-900');
     }
 
     h1 {
