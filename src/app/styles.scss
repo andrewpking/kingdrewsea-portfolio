@@ -70,7 +70,7 @@ body {
     color: map.get(map.get($color-pallete, 'light'), 'grey-900');
 }
 
-main.project-page {
+main, main.project-page {
     margin: 0 auto;
     max-width: 70rem;
     padding: 1.25rem;
@@ -167,7 +167,7 @@ main.project-page ul, li {
         color: map.get(map.get($color-pallete, 'dark'), 'grey-900');
     }
 
-    main.project-page {
+    main, main.project-page {
         background-color: map.get(map.get($color-pallete, 'dark'), 'grey-100');
     }
 
