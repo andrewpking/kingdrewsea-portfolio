@@ -18,16 +18,16 @@ interface ProjectImagesBlockProps {
 
 const ProjectImagesBlock: React.FC<ProjectImagesBlockProps> = ({ images, direction = 'row', width, maxHeight, caption, children }) => {
   return (
-    <div className="w-full max-w-7xl mx-auto flex flex-row ">
+    <div className="w-full max-w-7xl mx-auto tiny:block sm:flex flex-row ">
       <section className="tiny:block sm:flex-1">
         <div className={`grid gap-6 ${
           direction === 'row' 
             ? `grid-cols-1 ${
                 images.length > 1 ? 'sm:grid-cols-2' : ''
               } ${
-                images.length > 3 ? 'lg:grid-cols-3' : ''
+                images.length > 3 ? 'md:grid-cols-3' : ''
               } ${
-                images.length > 4 ? 'lg:grid-cols-5' : ''
+                images.length > 4 ? 'md:grid-cols-5' : ''
               }`
             : 'grid-cols-1'
         }`}>
