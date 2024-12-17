@@ -1,4 +1,4 @@
-import Metadata from "../components/metadata";
+import Metadata from "../components/Metadata";
 
 const HSR: Metadata = {
     title: 'High Speed Rail',

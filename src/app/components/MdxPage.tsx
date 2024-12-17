@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Header from './Header';
-import Metadata from './metadata';
+import Metadata from './Metadata';
 import Footer from './Footer';
 import '../styles.scss';
 

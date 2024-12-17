@@ -1,4 +1,4 @@
-import Metadata from '../components/metadata';
+import Metadata from '../components/Metadata';
 
 const resitogether: Metadata = {
     title: 'ResiTogether',

@@ -1,4 +1,4 @@
-import Metadata from '../components/metadata';
+import Metadata from '../components/Metadata';
 
 const slScreens: Metadata = {
     title: 'SL Screens',
