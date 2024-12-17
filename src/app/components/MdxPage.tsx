@@ -1,14 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Header from './Header';
+import Metadata from './metadata';
+import Footer from './Footer';
 import '../styles.scss';
-
-interface Metadata {
-    title: string;
-    description: string;
-    image: string;
-    imageAlt: string;
-}
 
 interface MdxPageProps {
     metadata: Metadata;
@@ -50,6 +45,7 @@ const MdxPage: React.FC<MdxPageProps> = ({ metadata, children }) => {
                 </p>
                 {children}
             </main>
+            <Footer />
         </>
     );
 }
