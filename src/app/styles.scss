@@ -1,0 +1,202 @@
+@use 'sass:map';
+
+/** Define global color pallete for light and dark mode **/
+$color-pallete: (
+    light: (
+        primary: #9C27B0,    // Vivid magenta
+        secondary: #1976D2,   // Strong blue
+        accent: #E040FB,      // Bright magenta
+        success: #2E7D32,     // Dark green
+        danger: #D32F2F,      // Bright red
+        warning: #F57C00,     // Dark orange
+        info: #0288D1,        // Info blue
+        grey-100: #F5F5F5,    // Lightest grey
+        grey-200: #E0E0E0,    // Light grey
+        grey-700: #616161,    // Medium grey
+        grey-900: #212121     // Darkest grey
+    ),
+    dark: (
+        primary: #CE93D8,     // Light magenta
+        secondary: #64B5F6,   // Light blue
+        accent: #F48FB1,      // Light pink
+        success: #81C784,     // Light green
+        danger: #E57373,      // Light red
+        warning: #FFB74D,     // Light orange
+        info: #4FC3F7,        // Light info blue
+        grey-100: #212121,    // Darkest grey
+        grey-200: #424242,    // Dark grey
+        grey-700: #BDBDBD,    // Light grey
+        grey-900: #F5F5F5     // Lightest grey
+    )
+);
+
+// Header styles
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(map.get(map.get($color-pallete, 'light'), 'grey-100'), 0.9);
+}
+
+header a {
+    color: map.get(map.get($color-pallete, 'light'), 'primary');
+}
+
+header a:hover {
+    color: map.get(map.get($color-pallete, 'light'), 'accent');
+}
+
+.mobile-menu {
+    background-color: rgba(map.get(map.get($color-pallete, 'light'), 'grey-100'), 0.8);
+    backdrop-filter: blur(4px);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.image-head-container p {
+    font-size: 1.25em;
+    color: map.get(map.get($color-pallete, 'light'), 'grey-900');
+}
+
+.image-head-container h1 {
+    color: map.get(map.get($color-pallete, 'light'), 'secondary');
+}
+
+// Usage in your styles
+body {
+    background-color: map.get(map.get($color-pallete, 'light'), 'grey-100');
+    color: map.get(map.get($color-pallete, 'light'), 'grey-900');
+}
+
+main.project-page {
+    margin: 0 auto;
+    max-width: 70rem;
+    padding: 1.25rem;
+    background-color: map.get(map.get($color-pallete, 'light'), 'grey-100');
+}
+
+.overlay {
+    background-color: rgba(map.get(map.get($color-pallete, 'light'), 'grey-100'), 0.85);
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+    color: map.get(map.get($color-pallete, 'light'), 'primary');
+}
+
+h2, h3, h4, h5, h6 {
+    font-size: 1.25em;
+    margin: 0.75rem 0;
+    color: map.get(map.get($color-pallete, 'light'), 'secondary');
+}
+
+h3 {
+    font-size: 1.125em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+p {
+    font-size: 1em;
+    color: map.get(map.get($color-pallete, 'light'), 'grey-700');
+}
+
+main.project-page p {
+    margin: 1rem 0;
+}
+
+main.project-page img {
+    margin: 2rem 0 0.5rem;
+}
+
+main.project-page a {
+    color: map.get(map.get($color-pallete, 'light'), 'primary');
+}
+
+main.project-page ul {
+    list-style-type: disc;
+    padding: 0;
+    margin: 0.5rem 0;
+}
+
+main.project-page ul, li {
+    margin-left: 0.75rem;
+    color: map.get(map.get($color-pallete, 'light'), 'grey-700')
+}
+
+// Styles for d3 tooltip 
+.tooltip {
+    padding: 0.5rem;
+    background-color: map.get(map.get($color-pallete, 'light'), 'grey-100');
+    border: 1px solid map.get(map.get($color-pallete, 'light'), 'grey-200');
+    border-radius: 0.25rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    header {
+        background-color: rgba(map.get(map.get($color-pallete, 'dark'), 'grey-100'), 0.9);
+    }
+
+    header a {
+        color: map.get(map.get($color-pallete, 'dark'), 'primary');
+    }
+    
+    header a:hover {
+        color: map.get(map.get($color-pallete, 'dark'), 'accent');
+    }
+
+    .mobile-menu {
+        background-color: rgba(map.get(map.get($color-pallete, 'dark'), 'grey-100'), 0.8);
+    }
+
+    .image-head-container p {
+        color: map.get(map.get($color-pallete, 'dark'), 'grey-900');
+    }
+
+    .image-head-container h1 {
+        color: map.get(map.get($color-pallete, 'dark'), 'secondary');
+    }
+
+    body {
+        background-color: map.get(map.get($color-pallete, 'dark'), 'grey-100');
+        color: map.get(map.get($color-pallete, 'dark'), 'grey-900');
+    }
+
+    main.project-page {
+        background-color: map.get(map.get($color-pallete, 'dark'), 'grey-100');
+    }
+
+    .overlay {
+        background-color: rgba(map.get(map.get($color-pallete, 'dark'), 'grey-100'), 0.85);
+    }
+
+    h1 {
+        color: map.get(map.get($color-pallete, 'dark'), 'primary');
+    }
+
+    h2, h3, h4, h5, h6 {
+        color: map.get(map.get($color-pallete, 'dark'), 'secondary');
+    }
+
+    p {
+        color: map.get(map.get($color-pallete, 'dark'), 'grey-700');
+    }
+
+    main.project-page ul, li {
+        color: map.get(map.get($color-pallete, 'dark'), 'grey-700')
+    }
+
+    main.project-page a {
+        color: map.get(map.get($color-pallete, 'dark'), 'primary');
+    }
+
+    .tooltip {
+        background-color: map.get(map.get($color-pallete, 'dark'), 'grey-100');
+        border: 1px solid map.get(map.get($color-pallete, 'dark'), 'grey-200');
+    }
+}

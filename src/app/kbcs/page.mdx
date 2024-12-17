@@ -1,0 +1,141 @@
+import MdxPage from '../components/MdxPage'
+import '../styles.scss'
+
+export const metadata = {
+  title: 'KBCS Theme',
+  description: 'The KBCS Accessibility Proposal aims to make the KBCS website a more welcoming and accessible space for all abilities. The project focuses on improving the website’s design and usability by following modern accessibility standards and best practices. This effort shows KBCS\'s dedication to service its diverse audience by ensuring everyone can fully access and enjoy the website.',
+  image: '/images/KBCS_Menu-Bar_Flow.png',
+  imageAlt: 'Three screenshots stitched together of the KBCS website with using voiceover output on the bottom. All three screenshots show a similar appearing website with a brown menu bar on top with three elements, a hamburger menu button, the KBCS logo outlined in white which reads, "91.3" KBCS, and a listen icon. Below is now playing widget on a grey background that says "Roots Rock and Soul with Iaan Hughes" and a banner below for the show which has an orange background and red highly stylezed text on top of a record player.'
+}
+
+<MdxPage metadata={metadata}>
+By [Sama Khalid][1], [Drew King][2], [Colin Xiao][3], and [Sophia Lin][4]
+
+## Introduction
+
+Many websites, including [KBCS.fm][5], struggle to meet accessibility standards. One reason is the [43.7% of websites are built in WordPress][6] and many WordPress themes are not designed to be accessible. This makes it harder for people with disabilities to use these websites, even if the content itself is accessible. To address this, the KBCS team decided not to wait for help from Bellevue College IT. Instead, Drew took the lead in updating the WordPress theme to make it more accessible while meting the specific needs of KBCS.
+
+The project includes updating [KBCS WordPress theme][7] and creating clear accessibility guidelines for staff. The team used `PHP`, `HTML/CSS`, and `JavaScript` to make these changes, ensuring the project is practical and achievable. By working together and reviewing each other's work, the team created a better website and helpful resources for staff to create accessible content in the future. This project is an important step toward making the KBCS website a more inclusive space for everyone. The [KBCS website with improved accessibility][8] is currently being staged for review by Bellevue College IT.
+
+## Positive Disability Principles
+
+KBCS remains a pillar of the community in expressing positive disability principles. As a radio station, they primarily embody the principles dealing with community and ableism through diverse radio broadcasts and shows. On the other hand, their website, [KBCS.fm][9], falls short in  representing some of the disability principles effectively. Our Accessibility Implementation and Accessible content guideline aims to help KBCS by improving areas where disability principles are not as obvious. The following sections will address each positive disability principle in the following points: how the original website expressed these principles, how our work affected these principles, and what KBCS should do to improve these principles.
+
+### Ableism and Accessibility
+
+Previously, KBCS positively addressed the two principles, ableism and accessibility, by having a website. Specifically, by having a website and their regular radio station, more people of different needs could access the broadcast materials. On the other hand, the KBCS website fails to fully embody these two principles since the website itself can be inaccessible. This inaccessibility means that the principle of ableism is not met because it effectively prioritizes the needs and experiences of able-bodied users while disregarding or marginalizing those with disabilities, and the principle of accessibility is not met because the website fails to provide equal access to all users, including those who rely on assistive technologies. Our work has since addressed these pitfalls by improving the underlying theme and web content, ensuring that the website now offers more equitable and inclusive access for everyone. Going forward, KBCS should incorporate our content guidelines to their web content publishing policies and include some of the accessibility changes that our team has produced to improve the website theme itself.
+
+### Disability Led
+
+Previously, KBCS programming has fostered diversity in the voices and viewpoints they broadcast, including those of individuals with disabilities. In doing so, both their radio broadcasts and website reflect a disability-led approach. Our work, while not directly addressing this principle, may help bring awareness to accessibility as a whole necessitating the direct input of people who experience accessibility barriers. Going forward, KBCS should look for leaders in disability led decision making to further embody this principle.
+
+### User Control and Agency
+
+Originally, the KBCS website offered basic interaction for users but did not fully support the nuanced control and customization that many individuals with disabilities require with accessible technologies. To address user control and agency, our work has improved the website such that screen readers and magnifiers better interact with the pages, allowing users more control and agency with how they use the KBCS website. Going forward, KBCS should look towards more accessible and flexible widgets such that users can dictate their engagement.
+
+### Addressing the Community
+
+Originally, the KBCS website addressed the community principle primarily through diverse content acknowledging the intersectional and varied experiences of disabled individuals, including those who are multiply disabled. Our work, while not directly addressing this principle, attempts to address issues that people who use accessible technologies may encounter while using the website, acknowledging the needs of the broader disability community. Going forward, KBCS should continue to broaden its outreach efforts, collaborate with disability-led groups, and create accessible content that actively highlights and includes people from all facets of the disabled community.
+
+## Methodology and Results
+
+[User Accessibility Reports][10] (UAR's) for KBCS were generated for KBCS by Drew King, Belem Barrientos-Guevara, and Andrea Danila. These UAR's were used to help identify accessibility issues with the KBCS website. We were able to identify which issues were present in the theme, such as no aria-label for the Search bar. Most of the issues identified in this report were for content published to the site, which is not accessible in the theme. We were able to identify a need for accessible authoring documentation for KBCS staff along with an accessible WordPress theme.
+
+### What did we do?
+
+Programming interactions in `PHP`, `HTML`, `CSS`, and `JS` to make the KBCS custom theme accessible by:
+
+- Collaborating in Drew's [fork of the KBCS theme on github][11]
+- Using VoiceOver and screen magnification for manual testing
+- Using [Deque Axe DevTools][12] and [WebAIM WAVE extension][13] for automated testing
+
+Writing [accessible posting documentation][14] and applying accessible documentation guidelines to this document including:
+
+- Nested headings for semantics
+- Plain language
+
+### What did we implement?
+
+Accessibility fixes were implemented for the KBCS theme to ensure that people with disabilities who use Assistive Technology are able to use the KBCS website without significant barriers.
+
+![Three screenshots stitched together of the KBCS website with using voiceover output on the bottom. All three screenshots show a similar appearing website with a brown menu bar on top with three elements, a hamburger menu button, the KBCS logo outlined in white which reads, "91.3" KBCS, and a listen icon. Below is now playing widget on a grey background that says "Roots Rock and Soul with Iaan Hughes" and a banner below for the show which has an orange background and red highly stylezed text on top of a record player. In the first screenshot, which is of the currently live site, the screen reader focus is on an element which is visually hidden and reads, "visited, link, Programs". On the second screenshot there is screen reader focus on the Menu button, the screenshot reads, "Menu, button, banner". The third screenshot shows the expanded hamburger menu with screen focus on programs, the screen reader reads, "link, Programs". The visible expanded hamburger menu has a dark brown background, white text, a list of links to other parts of the website, a Donate button with brown text and a light green background, below the donate button is a search bar with a white background that takes up half of the width and has a search button next to it.][image-1]
+**Figure 1:** Demonstration of a VoiceOver accessibility issue in the menu bar of the KBCS website. The menu button was not accessible by screen readers and the submenu would remain visible to screen reader users despite not being on screen. The first image on the left in the series shows the broken implementation, the second two images in the series show the fixed implementation where elements inside of the hamburger menu are hidden from screen reader focus using the HTML Hidden attribute.
+
+We updated the theme by:
+
+- Removing unnecessary `<div>`'s by using `HTML` tags with [ARIA roles and attributes][15]
+- Adding appropriate heading levels to the `PHP` rendering the theme by using `CSS` to style headings and having a `<h1>` tag at the top level of every page's content.
+- Increase font size for text by editing `CSS` and converting units from `px` to `em` and `rem` for better resizing of text.
+- Turned the hamburger menu in the top level nav into a `<button>` element on mobile, instead of a link with a listener, to ensure it is fully accessible to AT.
+- Wrote JavaScript to show and hide the menu bar semantically on mobile, overriding `JQuery` which altered the height of the box and did not semantically hide the menu.
+
+Removing unnecessary `<div>`'s and changing the units of the `CSS` was considerably time consuming. Since the website was designed with bootstrap before `HTML5` went mainstream, everything was styled with div's. The override styles of the bootstrap were completely in pixel units, meaning that styles and fonts were not responsive to changes in the window size. All of these [fixes were demonstrated in a recording][16] on google drive.
+
+## Disability Justice Analysis
+
+KBCS is a community hub for people in the Puget Sound area. By ensuring that their website is accessible to people with disabilities, we affirm the disability justice principles of intersectionality, recognizing wholeness, and collective access.
+
+### Intersectionality
+
+#### Defining Intersectionality
+
+Intersectionality is recognizing we have different aspects that are targets for discrimination, not only because of their disability but also due to factors like race, class, gender, and sexuality. Introduced by Kimberle Crenshaw, identities influence how they are treated.
+
+#### Analysis of Intersectionality
+
+The KBCS Accessibility Proposal focuses on creating more inclusive digital spaces by addressing accessibility barriers, which can affect users differently based on their unique identities and circumstances. For instance, users with disabilities who also face challenges such as low income or limited internet literacy may encounter compounded difficulties accessing content. To fully embrace intersectionality, KBCS could ensure its accessibility guidelines account for these diverse realities by offering plain-language instructions and training contributors to recognize varying user needs. By incorporating these practices, KBCS can create a digital platform that not only meets accessibility standards but also includes users who share a multitude of identities that intersect.
+
+### Recognizing Wholeness
+
+#### Defining Recognizing Wholeness
+
+Recognizing wholeness is a principle expressing that each disabled person contains multitudes beyond identity. This principle claims that each person has their own unique desires, needs, wants, and lived experiences. Disabled people are not to be pathologized but recognized as whole people.
+
+#### Analysis of Recognizing Wholeness
+
+Our project advances the principle of recognizing wholeness by creating an accessible KBCS web theme, ensuring community radio is inclusive of people with disabilities. KBCS’s diverse programming, like *Sojourner Truth*, which highlights news and politics affecting women of color, must reach the broadest audience. Additionally, people with disabilities work at KBCS, including my friend who manages web content and benefits directly from plain-language accessible content guidelines due to a comprehensive disorder. By enabling access and contribution for disabled people, we prevent exclusion of those using assistive technology and affirm that people with disabilities are whole members of our local community.
+
+### Collective Access
+
+#### Defining Collective Access
+
+Collective access is collectively addressing accommodations and needs through shared responsibility. We recognize that accommodations are not something to be embarrassed about and that marginalized groups can engage with each other differently based on a variety of cultures. This fosters an inclusive community to cultivate ideas towards access needs and embrace differences.
+
+#### Analysis of Collective Access
+
+Our project advances the principle of collective access by creating an accessible KBCS web theme that fosters collaboration and inclusivity to address diverse user needs. We have created an accessible content guide for KBCS staff to invite them to improve future page content associated with elements like forms, videos, images, and more. We used automated tools to identify and fix issues. These automated tools were AXE and VoiceOver for testing. In the future, we can improve how we approach collective access by conducting usability tests or interviews with disabled people who use screen readers and other assistive technology. By collecting feedback on people’s experiences, we can better understand which areas we need improvement on to ensure a successful user experience and interactions with the website. This initiative can address the needs of various people in the community and collectively bring shared responsibility to the creators of the KBCS website and people who strive to improve accessibility for all.
+
+## Learnings and Future Work
+
+There was a steep learning curve to this project. In particular since wordpress themes are not built in modern web programming frameworks.
+
+### Learnings
+
+Through this project, we gained valuable insights and skills that will help us create more inclusive and accessible digital experiences. We learned how to set up a developer environment for local testing, which enhanced our ability to create and debug code efficiently. Understanding the workflow was another critical learning experience, as it allowed us to collaborate effectively and streamline the development process. Peer code reviews provided an opportunity to improve the quality of our work by receiving constructive feedback and ensuring that accessibility standards were met across all features. Using the AXE Accessibility Tool taught us how to identify and resolve common accessibility issues systematically, making our work more thorough and impactful. Lastly, learning to write in plain language was an essential skill for making content clear and understandable for all users, regardless of their technical or literacy levels.
+
+### Future Work
+
+Looking to the future, this project has laid the foundation for further work in accessibility, both within KBCS and beyond. We plan to extend our efforts by refining and expanding the accessibility guidelines, creating a more robust framework that can be used across various digital platforms. By integrating more advanced accessibility tools and testing methods, we aim to build even more inclusive web experiences. Our team is also committed to sharing what we’ve learned with other organizations and encouraging the adoption of accessibility practices industry-wide. Through workshops, tutorials, and public resources, we hope to inspire others to prioritize accessibility in their projects.
+
+Ultimately, we aspire to make a tangible impact in the real world by contributing to a digital landscape where everyone can participate equally. Accessibility is not just a technical requirement—it’s a social responsibility. By furthering the work we’ve started, we can help create a more inclusive society where digital tools and content are accessible to all, regardless of ability. Our journey has only just begun, and we are excited to continue pushing the boundaries of what is possible in accessible web design.  
+
+[1]: mailto:khalisam@uw.edu
+[2]: mailto:kingdrew@uw.edu
+[3]: mailto:kxiaocln@uw.edu
+[4]: mailto:solin7@uw.edu
+[5]: https://www.kbcs.fm
+[6]: https://w3techs.com/technologies/details/cm-wordpress
+[7]: https://github.com/BellevueCollege/kbcs
+[8]: https://staging-kbcsfm.kinsta.cloud/
+[9]: https://www.kbcs.fm
+[10]: https://docs.google.com/document/d/1wXC-5jjV6TuOkJY44GZiUNQvo657fuM3QxMc7ZFJHMw/edit?usp=sharing
+[11]: https://github.com/andrewpking/kbcs
+[12]: https://www.deque.com/axe-devtools-accessibility-testing/
+[13]: https://wave.webaim.org/extension/
+[14]: https://docs.google.com/document/d/1sSSXT-lodrMpvKQK3GVRCUfR8TXRHT_D/edit?usp=sharing&ouid=114544605167980628984&rtpof=true&sd=true
+[15]: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA
+[16]: https://drive.google.com/file/d/17SiwtH7Ux7M1nmmgETcM9AZ3GzsUQnIy/view?usp=drive_link
+
+[image-1]: /images/KBCS_Menu-Bar_Flow.png "Figure 1"
+
+</MdxPage>
