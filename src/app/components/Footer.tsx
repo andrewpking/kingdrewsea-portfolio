@@ -30,10 +30,11 @@ export default function Footer() {
       >
         <Image
           src="/images/github.svg"
-          alt="Github logo in black"
+          alt="Github logo"
           width={16}
           height={16}
           aria-hidden="true"
+          className="dark:invert transition-[filter] duration-300"
         />
         GitHub
       </a>
