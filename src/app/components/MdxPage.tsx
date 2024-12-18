@@ -1,12 +1,12 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Header from './Header';
-import Metadata from './Metadata';
+import PageMetadata from './Metadata';
 import Footer from './Footer';
 import '../styles.scss';
 
 interface MdxPageProps {
-    metadata: Metadata;
+    metadata: PageMetadata;
     children?: React.ReactNode;
 }
 

@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Metadata from './Metadata';
+import PageMetadata from './Metadata';
 
 interface PreviewCardProps {
-    metadata: Metadata;
+    metadata: PageMetadata;
 }
   
   

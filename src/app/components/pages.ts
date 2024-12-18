@@ -1,9 +1,9 @@
-import Metadata from "./Metadata";
+import PageMetadata from "./Metadata";
 
 /** Create an object that contains a map of all pages **/
 /** The URL should be the key **/
 /** The value should be a Record object **/
-const pages: Record<string, Metadata> = {
+const pages: Record<string, PageMetadata> = {
     '/': {
         title: 'Welcome to my portfolio!',
         description: 'My name is Drew and I am an aspring software engineer with a degree in Computer Science from the Paul G Allen School. I am passionate about creating software that is both beautiful and accessible. I have experience with a variety of technologies and am always looking to learn more. I am currently looking for a full-time software engineering role.',
@@ -13,7 +13,7 @@ const pages: Record<string, Metadata> = {
     }
 }
 
-const projects: Record<string, Metadata> = {
+const projects: Record<string, PageMetadata> = {
     '/high-speed-rail': {
         title: 'High Speed Rail',
         description: 'Reimagining the Future of Travel',
