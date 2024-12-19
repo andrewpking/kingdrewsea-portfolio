@@ -1,14 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Metadata from './Metadata';
+import PageMetadata from './Metadata';
 
 interface PreviewCardProps {
-    metadata: Metadata;
+    meta: PageMetadata;
 }
   
   
   
-const PreviewCard: React.FC<PreviewCardProps> = ({ metadata }) => {
+const PreviewCard: React.FC<PreviewCardProps> = ({ meta: metadata }) => {
     return (
         <Link 
             href={metadata.href}

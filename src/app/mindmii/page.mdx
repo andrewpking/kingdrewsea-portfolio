@@ -3,7 +3,7 @@ import ProjectTeamGallery from "../components/ProjectTeamGallery";
 import Head from 'next/head';
 import Image from 'next/image';
 import MdxPage from '../components/MdxPage';
-import mindmii from './mindmii'
+import {projects} from '../components/pages'
 import '../styles.scss';
 
 export const images = {
@@ -38,7 +38,7 @@ export const images = {
   watchFour: "/images/mindmii/watch_4.png",
 };
 
-<MdxPage metadata = {mindmii}>
+<MdxPage meta = {projects['/mindmii']}>
 ## Team
 
   <ProjectTeamGallery

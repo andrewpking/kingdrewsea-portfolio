@@ -1,11 +1,8 @@
 import PreviewCard from "./components/PreviewCard";
-import resitogether from "./resitogether/resitogether";
-import HSR from "./high-speed-rail/high-speed-rail";
-import kbcs from "./kbcs/kbcs";
-import mindmii from "./mindmii/mindmii";
-import slScreens from "./sl-screens/sl-screens";
+import { projects } from "./components/pages";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import PageMetadata from "./components/Metadata";
 import "./styles.scss";
 
 export default function Home() {
@@ -25,21 +22,9 @@ export default function Home() {
           </h2>
           <p>Each of these projects were completed during my undergraduate education. Click on one to learn more.</p>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <PreviewCard
-              metadata={HSR}
-            />
-            <PreviewCard
-              metadata={kbcs}
-            />
-            <PreviewCard
-              metadata={mindmii}
-            />
-            <PreviewCard
-              metadata={resitogether}
-            />
-            <PreviewCard
-              metadata={slScreens}
-            />
+            {Object.values(projects).map((page: PageMetadata) => (
+              <PreviewCard key={page.href} meta={page} />
+            ))}
           </div>
         </main>
         <Footer />
