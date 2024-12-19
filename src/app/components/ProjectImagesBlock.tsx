@@ -18,8 +18,8 @@ interface ProjectImagesBlockProps {
 
 const ProjectImagesBlock: React.FC<ProjectImagesBlockProps> = ({ images, direction = 'row', width, maxHeight, caption, children }) => {
   return (
-    <div className="w-full max-w-7xl mx-auto tiny:block sm:flex flex-row ">
-      <section className="tiny:block sm:flex-1">
+    <div className={`max-w-7xl mx-auto tiny:block sm:flex flex-row`}>
+      <section className={`tiny:block sm:flex-1 ${direction === 'column' ? `w-[${width * 100}px]` : `w-[${width * 100 * images.length}]px`}`}>
         <div className={`grid gap-6 ${
           direction === 'row' 
             ? `grid-cols-1 ${
@@ -36,23 +36,24 @@ const ProjectImagesBlock: React.FC<ProjectImagesBlockProps> = ({ images, directi
                  className={`flex flex-col ${
                    direction === 'column' ? 'mb-6' : ''
                  }`}>
-              <div className="w-full sm:max-w-[700px] md:max-w-[900px] mx-auto">
+              <div className="sm:max-w-[700px] md:max-w-[900px] mx-auto">
                 <Image 
+                  fill={false}
                   src={image.src} 
                   alt={image.alt}
                   width={width * 100}
                   height={maxHeight}
-                  className="rounded-lg w-full"
+                  className="rounded-lg"
                 />
               </div>
               {image.caption && (
-                <p className="text-sm italic">{image.caption}</p>
+                <p className="italic">{image.caption}</p>
               )}
             </div>
           ))}
         </div>
         {caption && (
-          <p className="mt-4 text-sm italic">{caption}</p>
+          <p className="mt-4 italic">{caption}</p>
         )}
       </section>
       {children && (
