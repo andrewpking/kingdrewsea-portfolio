@@ -10,10 +10,12 @@ export default function PageHeading ({metadata}: PageHeadingProps) {
         <>
             <div className="image-head-container relative md:mt-20 md:pt-4 sm:mt-12 sm:pt-0">
                 <Image 
+                    fill={false}
                     src={metadata.image} 
                     alt={metadata.imageAlt} 
                     width={1120} 
                     height={150}
+                    sizes= "width: 100vw, height: 10vh"
                     className="w-full h-[250px] md:h-[200px] object-cover"
                     priority
                 />
