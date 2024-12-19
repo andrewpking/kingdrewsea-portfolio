@@ -1,9 +1,8 @@
-import MdxPage from '../components/MdxPage'
 import TrainBuilderDashboard from './components/Dashboard'
-import {projects} from '../components/pages'
-import '../styles.scss'
+import { projects } from '../components/pages';
+import PageHeading from '../components/PageHeading';
 
-<MdxPage meta={projects['/high-speed-rail']}>
+<PageHeading metadata={projects['/high-speed-rail']} />
 
 The High Speed Rail project is a conceptual train builder for a high-speed rail system in the United States. The goal of the project is to provide a fast, efficient, and sustainable mode of transportation that connects major cities across the country. The project envisions a network of high-speed trains that travel at speeds of up to 300 miles per hour, making it possible to travel between cities in a matter of hours. We estimated the ridership by analyzing the population density and distance between major cities in the United States.
 
@@ -38,5 +37,3 @@ The project was built using React, a JavaScript library for building user interf
 ### Deployment
 
 The [original High Speed Rail project](https://high-speed-rail-cse442-24au-fp-6a981c250f8bd8e994fe6608199c4157.pages.cs.washington.edu/) was deployed to gitlab pages with additional visualizations created by Joey Kreuger and styles by Jack Rosenbloom. We used a custom build script to generate the static files and deploy them to a web server using GitLab CI/CD.
-
-</MdxPage>
