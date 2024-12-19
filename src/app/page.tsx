@@ -1,14 +1,11 @@
 import PreviewCard from "./components/PreviewCard";
 import { projects } from "./components/pages";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import PageMetadata from "./components/Metadata";
 import "./styles.scss";
 
 export default function Home() {
   return (
     <div>
-      <Header />
       <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <main className="row-start-2 flex flex-col items-center justify-center gap-6">
           <h1 className="text-center">
@@ -27,7 +24,6 @@ export default function Home() {
             ))}
           </div>
         </main>
-        <Footer />
       </div>
     </div>
   );
