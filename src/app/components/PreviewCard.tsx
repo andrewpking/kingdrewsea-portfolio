@@ -3,12 +3,12 @@ import Link from 'next/link';
 import PageMetadata from './Metadata';
 
 interface PreviewCardProps {
-    metadata: PageMetadata;
+    meta: PageMetadata;
 }
   
   
   
-const PreviewCard: React.FC<PreviewCardProps> = ({ metadata }) => {
+const PreviewCard: React.FC<PreviewCardProps> = ({ meta: metadata }) => {
     return (
         <Link 
             href={metadata.href}

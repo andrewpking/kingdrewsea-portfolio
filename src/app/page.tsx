@@ -23,7 +23,7 @@ export default function Home() {
           <p>Each of these projects were completed during my undergraduate education. Click on one to learn more.</p>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {Object.values(projects).map((page: PageMetadata) => (
-              <PreviewCard key={page.href} metadata={page} />
+              <PreviewCard key={page.href} meta={page} />
             ))}
           </div>
         </main>

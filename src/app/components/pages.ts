@@ -5,7 +5,7 @@ import PageMetadata from "./Metadata";
 /** The value should be a Record object **/
 const pages: Record<string, PageMetadata> = {
     '/': {
-        title: 'Welcome to my portfolio!',
+        title: 'Drew King - Portfolio',
         description: 'My name is Drew and I am an aspring software engineer with a degree in Computer Science from the Paul G Allen School. I am passionate about creating software that is both beautiful and accessible. I have experience with a variety of technologies and am always looking to learn more. I am currently looking for a full-time software engineering role.',
         image: '/images/cover.png',
         imageAlt: 'A photo of Drew in front of a computer with a plant in the background.',

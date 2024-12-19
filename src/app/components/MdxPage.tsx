@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import Header from './Header';
 import PageMetadata from './Metadata';
@@ -6,17 +5,13 @@ import Footer from './Footer';
 import '../styles.scss';
 
 interface MdxPageProps {
-    metadata: PageMetadata;
+    meta: PageMetadata;
     children?: React.ReactNode;
 }
 
-const MdxPage: React.FC<MdxPageProps> = ({ metadata, children }) => {
+const MdxPage: React.FC<MdxPageProps> = ({ meta: metadata, children }) => {
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-            </Head>
             <Header />
             <main className="project-page">
                 <div className="image-head-container relative md:mt-20 md:pt-4 sm:mt-12 sm:pt-0">
