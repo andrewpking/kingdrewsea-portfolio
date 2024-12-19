@@ -13,10 +13,11 @@ interface ProjectTeamGalleryProps {
 
 const ProjectTeamGallery: React.FC<ProjectTeamGalleryProps> = ({ members }) => {
   return (
-    <section className="team-gallery, grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <section aria-label='Team Photos' className="team-gallery, grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {members.map((member, index) => (
         <div key={index} className="team-member flex flex-col items-center gap-4">
           <Image
+            fill={false}
             src={member.photo || defaultPhoto}
             alt={`Photo of ${member.name[0]}.`}
             className="team-member-photo"

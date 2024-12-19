@@ -2,9 +2,10 @@ import ProjectImagesBlock from "../components/ProjectImagesBlock";
 import ProjectTeamGallery from "../components/ProjectTeamGallery";
 import Head from 'next/head';
 import Image from 'next/image';
-import MdxPage from '../components/MdxPage';
-import {projects} from '../components/pages'
-import '../styles.scss';
+import { projects } from '../components/pages';
+import PageHeading from '../components/PageHeading';
+
+<PageHeading metadata={projects['/mindmii']} />
 
 export const images = {
   imageTeamPerson1: "/images/mindmii/Drew.png",
@@ -38,7 +39,6 @@ export const images = {
   watchFour: "/images/mindmii/watch_4.png",
 };
 
-<MdxPage meta = {projects['/mindmii']}>
 ## Team
 
   <ProjectTeamGallery
@@ -166,15 +166,13 @@ We explored solutions based on our research to develop MindMii, a mobile app and
 - **Easily identify and respond to missed messages**
 - **Respond to a message in an appropriate amount of time**
 
-</ProjectImagesBlock>
-
 The iterative design process we used includes usability testing, heuristic evaluation, and more usability testing. We found the paper prototype very effective in testing to identify many of the most severe issues in our design, resulting in a broad yet rapid testing and inspection process.
 
 In our first paper prototype people found it hard to understand how to interact with MindMii because it did not follow conventions of instant messaging platforms participants were familiar with. An issue that came up in our second paper prototype is clarity around the availability of features earlier in the messaging flow. A digital mockup was created from the earlier iterations, providing context for improvement by iterative revision.
+</ProjectImagesBlock>
+
 
 Our iterative design process revealed key insights which supported continued design improvement. Three of these key insights were:
-
-### The watch notifications needed more clarity of design and interactivity.
 
 <ProjectImagesBlock
     images={[
@@ -194,6 +192,7 @@ Our iterative design process revealed key insights which supported continued des
     width={2}
     maxHeight={400}
 >
+### The watch notifications needed more clarity of design and interactivity.
 
 An issue identified from user testing was confusion about how to interact with the watch notification which appears as a color ring. This confusion was identified by participant feedback during paper prototype testing, when they wanted to know what to do about the color ring and weren't sure if or how to suppress or interact with the notification. To support this issue, we added a bell icon to the color ring which provides a signifier to the to the user indicating that this is a notification, following conventions in this design space.
 
@@ -221,8 +220,6 @@ During each of our 3 user tests we received questions regarding the style used t
 
 </ProjectImagesBlock>
 
-### Suggestive features should provide more types of help.
-
 <ProjectImagesBlock
     images={[
         {
@@ -238,15 +235,14 @@ During each of our 3 user tests we received questions regarding the style used t
     caption={
         "The right-hand image showing our final design offers help based on what is asked in open-format, rather than default offering a suggested selection of potential replies."
     }
-    width={3}
+    width={2}
     maxHeight={400}
 >
+### Suggestive features should provide more types of help.
 
 Our original suggestive response feature only provided texting suggestions and did not provide other types of help, an issue uncovered during a paper prototype interaction with participants. They found this issue when they performed the task of "identifying and responding to a missed message". The participant wanted send a different message than the options provided by MindMii's suggestive text. We expanded our suggestive text helper to one that provides general help features by accepting a prompt and allowing for regeneration of suggestions.
 
 </ProjectImagesBlock>
-
-### More action options should be provided in more places.
 
 <ProjectImagesBlock
     images={[
@@ -258,9 +254,10 @@ Our original suggestive response feature only provided texting suggestions and d
     caption={
         "By offering response assistance outside of opening a message we reduce some response anxiety that is cause by fear of 'leaving someone on read.'"
     }
-    width={4}
-    maxHeight={400}
+    width={3}
+    maxHeight={300}
 >
+### More action options should be provided in more places.
 
 The initial MindMii prototype's message response interface focused heavily on replying without offering other options such as accessing help or suggestions. This was an issue uncovered through paper prototype testing by participants. The ability to access features like help was buried too deeply in our design and needed to be hoisted into the earlier phases of the interaction. We noticed based on feedback that more types of help should be provided in addition to increased access to help and AI suggestions. We added assistive buttons to the text screen to provide help as an alternative to drafting a response.
 
@@ -371,5 +368,3 @@ Using the keyboard, the person drafts a response to the message. Upon completion
 Examining our other task to respond to a message in an appropriate amount of time, our scenario has MindMii notifying the person of an urgent message from earlier that needs a reply soon. The person decides to snooze the message since they are busy, but the app AI recognizes this message is time-sensitive and limits the snooze to five minutes. Following this, it re-prompts the person about this message and they realize the urgency of the message.
 
 The person opens the message and enters into reply mode. AI is there to support with suggestions, but the user composes a message of their own using the keyboard and presses send. The response is routed to the platform the message is native to. The notification is cleared from the lock screen. Messages are no longer forgotten with MindMii!
-
-</MdxPage>
