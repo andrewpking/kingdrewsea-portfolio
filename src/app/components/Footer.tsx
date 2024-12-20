@@ -54,7 +54,7 @@ export default function Footer() {
           Email
         </a>
         <Link 
-          href={'public/Resume.pdf'}  
+          href={'./Resume.pdf'}  
           target="_blank"  
           rel="noopener noreferrer" 
           locale={"false"} 
