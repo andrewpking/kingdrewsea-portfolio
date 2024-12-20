@@ -80,8 +80,48 @@ main, main.project-page {
     background-color: rgba(map.get(map.get($color-pallete, 'light'), 'grey-100'), 0.85);
 }
 
+// Thanks Claude 3.5 sonnet for the card animation
 .card-content {
     background-color: map.get(map.get($color-pallete, 'light'), 'grey-200');
+    transition: box-shadow 300ms ease;
+    box-shadow: 0 10px 12px -2px rgb(0 0 0 / 0.1), 
+                0 4px 5px -3px rgb(0 0 0 / 0.1);;
+
+    overflow: hidden; // Prevent content overflow
+    transform-style: preserve-3d; // Help with Safari rendering
+    will-change: transform; // Optimize performance
+    
+    h3.card-title {
+        font-size: 1.3em;
+        color: map.get(map.get($color-pallete, 'light'), 'info');
+        transition: all 300ms ease;
+        transform-origin: left; // Maintain alignment
+        transition: all 300ms ease; // Add base transition
+        font-size: 1.25em; // Set initial size
+    }
+    
+    img {
+        transition: transform 300ms ease; // Add base transition
+        transform-origin: center; // Set transform origin
+        transform: scale(1); // Set initial scale
+    }
+    
+    &:hover {
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 
+                   0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+}
+
+// Hover effect for cards
+.card-content:hover {
+    h3.card-title {
+        color: map.get(map.get($color-pallete, 'light'), 'accent');
+        transform: scale(1.04);
+    }
+
+    img {
+        transform: scale(1.04);
+    }
 }
 
 .card-content p {
@@ -182,8 +222,48 @@ main.project-page ul, li {
         background-color: rgba(map.get(map.get($color-pallete, 'dark'), 'grey-100'), 0.85);
     }
 
+    // Thanks Claude 3.5 sonnet for the card animation
     .card-content {
         background-color: map.get(map.get($color-pallete, 'dark'), 'grey-200');
+        transition: box-shadow 300ms ease;
+        box-shadow: 0 10px 12px -2px rgb(0 0 0 / 0.1), 
+                    0 4px 5px -3px rgb(0 0 0 / 0.1);;
+
+        overflow: hidden; // Prevent content overflow
+        transform-style: preserve-3d; // Help with Safari rendering
+        will-change: transform; // Optimize performance
+        
+        h3.card-title {
+            font-size: 1.3em;
+            color: map.get(map.get($color-pallete, 'dark'), 'info');
+            transition: all 300ms ease;
+            transform-origin: left; // Maintain alignment
+            transition: all 300ms ease; // Add base transition
+            font-size: 1.25em; // Set initial size
+        }
+        
+        img {
+            transition: transform 300ms ease; // Add base transition
+            transform-origin: center; // Set transform origin
+            transform: scale(1); // Set initial scale
+        }
+        
+        &:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 
+                    0 8px 10px -6px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    // Hover effect for cards
+    .card-content:hover {
+        h3.card-title {
+            color: map.get(map.get($color-pallete, 'dark'), 'accent');
+            transform: scale(1.04);
+        }
+
+        img {
+            transform: scale(1.04);
+        }
     }
 
     .card-content p {
