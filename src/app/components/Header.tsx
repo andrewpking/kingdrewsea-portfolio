@@ -30,7 +30,7 @@ export default function Header() {
 
     return (
         <header className="w-full shadow-sm fixed top-0 z-50">
-            <div className="max-w-7xl min-w-[100vw] mx-auto md:px-6 lg:px-8">
+            <div className="max-w-7xl min-w-[100vw] py-2 md:py-0 mx-auto md:px-6 lg:px-8">
                 <Link href="/" className='portfolio-title'>
                     <p className='ml-2 text-center hidden md:block'>Drew King&apos;s Portfolio</p>
                 </Link>
