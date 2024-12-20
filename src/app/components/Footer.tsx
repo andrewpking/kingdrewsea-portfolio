@@ -1,10 +1,11 @@
 import Image from 'next/image';
-import { MdEmail } from 'react-icons/md';
+import { MdEmail, MdOutlineNewspaper } from 'react-icons/md';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center p-4">
-      <nav className='tiny:row-start-3 tiny:flex gap-6 tiny:flex-wrap' aria-label="Footer Navigation">
+    <footer className="row-start-4 flex gap-6 flex-wrap items-center justify-center p-4">
+      <nav className='tiny:row-start-4 tiny:flex gap-6 tiny:flex-wrap' aria-label="Footer Navigation">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://linkedin.com/in/kingdrewsea"
@@ -52,6 +53,21 @@ export default function Footer() {
           
           Email
         </a>
+        <Link 
+          href={'public/Resume.pdf'}  
+          target="_blank"  
+          rel="noopener noreferrer" 
+          locale={"false"} 
+          download
+        >
+          <button className="flex items-center gap-2 hover:underline hover:underline-offset-4">
+          <MdOutlineNewspaper
+            aria-hidden="true"
+            size={16}
+            />
+             Downlod Resume 
+             </button>
+        </Link>
       </nav>
     </footer>
   );
