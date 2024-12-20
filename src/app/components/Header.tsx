@@ -30,11 +30,11 @@ export default function Header() {
 
     return (
         <header className="w-full shadow-sm fixed top-0 z-50">
-            <div className="max-w-7xl min-w-[100vw] py-2 md:py-0 mx-auto md:px-6 lg:px-8">
-                <Link href="/" className='portfolio-title'>
-                    <p className='ml-2 text-center hidden md:block'>Drew King&apos;s Portfolio</p>
+            <div className="max-w-7xl min-w-[100vw] py-2 md:py-0 mx-auto">
+                <Link href="/" className='portfolio-title hidden md:block md:my-4'>
+                    <p className='ml-2 text-center'>Drew King&apos;s Portfolio</p>
                 </Link>
-                <nav aria-label="Main navigation" className="flex items-center justify-evenly md:justify-center h-auto md:h-16">
+                <nav aria-label="Main navigation" className="flex items-center justify-evenly md:justify-center h-auto">
                     {/* Mobile menu button */}
                     <button 
                         className="md:hidden"
@@ -62,12 +62,12 @@ export default function Header() {
                             </button>
                     </Link>
                     {/* Desktop menu */}
-                    <ul className="hidden md:flex space-x-8">
+                    <ul className="hidden md:flex md:max-w-7xl md:justify-center md:space-x-4 md:flex-1 md:justify-center md:grid-rows">
                         {links.map((link) => (
-                            <li key={link.href}>
+                            <li key={link.href} className='py-4 w-full block content-center'>
                                 <Link 
                                     href={link.href}
-                                    className="px-3 py-2 text-sm font-medium"
+                                    className="px-3 py-2 w-full inline-block text-center"
                                 >
                                     {link.text}
                                 </Link>
