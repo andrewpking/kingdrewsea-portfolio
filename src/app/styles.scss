@@ -55,11 +55,11 @@ header {
 }
 
 header a {
-    color: map.get(map.get($color-pallete, 'light'), 'primary');
+    color: map.get(map.get($color-pallete, 'light'), 'secondary');
 }
 
 header a:hover {
-    color: map.get(map.get($color-pallete, 'light'), 'accent');
+    color: map.get(map.get($color-pallete, 'light'), 'info');
 }
 
 header a.portfolio-title {
