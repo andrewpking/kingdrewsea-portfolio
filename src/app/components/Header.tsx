@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { GiHamburgerMenu } from "react-icons/gi";
+import { MdOutlineNewspaper } from 'react-icons/md';
 
 
 // Credit to https://daily-dev-tips.com/posts/how-to-use-react-icons-in-nextjs/
@@ -30,18 +31,33 @@ export default function Header() {
 
     return (
         <header className="w-full shadow-sm fixed top-0 z-50">
-            <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div className="max-w-7xl min-w-[80vw] mx-auto px-4 md:px-6 lg:px-8">
             <p className='ml-2 text-center hidden md:block'>Drew King&apos;s Portfolio</p>
-                <nav aria-label="Main navigation" className="flex items-center justify-between h-16">
+                <nav aria-label="Main navigation" className="flex items-center justify-evenly md:justify-center h-auto md:h-16">
                     {/* Mobile menu button */}
                     <button 
                         className="md:hidden"
                         onClick={() => setIsOpen(!isOpen)}
                         aria-label="Menu"
                     >
-                        <GiHamburgerMenu className="h-6 w-6" />
+                        <GiHamburgerMenu className="h-4 w-4" />
                     </button>
-                    <p className='ml-2 text-center md:hidden'>Drew King&apos;s Portfolio</p>
+                    <p className='ml-4 text-center md:hidden'>Drew King&apos;s Portfolio</p>
+                    <Link 
+          href={'./Resume.pdf'}
+          target="_blank"
+          rel="noopener noreferrer"
+          download
+        >
+          <button className="md:hidden">
+          <MdOutlineNewspaper
+            color='black'
+            aria-hidden="true"
+            size={16}
+            />
+            <p className='sr-only'>Download Resume</p>
+             </button>
+        </Link>
                     {/* Desktop menu */}
                     <ul className="hidden md:flex space-x-8">
                         {links.map((link) => (

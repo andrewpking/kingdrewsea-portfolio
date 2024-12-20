@@ -37,8 +37,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
     background-color: rgba(map.get(map.get($color-pallete, 'light'), 'grey-100'), 0.9);
+    padding: 0.5rem;
+    
+    @media (min-width: 769px) {
+        padding: 1rem;
+    }
 }
 
 header a {
