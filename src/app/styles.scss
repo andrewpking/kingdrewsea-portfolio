@@ -53,6 +53,24 @@ header a:hover {
     color: map.get(map.get($color-pallete, 'light'), 'accent');
 }
 
+header a.portfolio-title {
+    line-height: 1rem;
+    font-weight: 500;
+    color: map.get(map.get($color-pallete, 'light'), 'grey-700');
+
+    &:hover {
+        color: map.get(map.get($color-pallete, 'light'), 'accent');
+    }
+}
+
+header button {
+    color: map.get(map.get($color-pallete, 'light'), 'grey-700');
+}
+
+header button:hover {
+    color: map.get(map.get($color-pallete, 'light'), 'accent');
+}
+
 .mobile-menu {
     background-color: rgba(map.get(map.get($color-pallete, 'light'), 'grey-100'), 0.8);
     backdrop-filter: blur(4px);
@@ -198,6 +216,24 @@ main.project-page ul, li {
     }
     
     header a:hover {
+        color: map.get(map.get($color-pallete, 'dark'), 'accent');
+    }
+
+    header a.portfolio-title {
+        line-height: 1rem;
+        font-weight: 500;
+        color: map.get(map.get($color-pallete, 'dark'), 'grey-700');
+    
+        &:hover {
+            color: map.get(map.get($color-pallete, 'dark'), 'accent');
+        }
+    }
+    
+    header button {
+        color: map.get(map.get($color-pallete, 'dark'), 'grey-700');
+    }
+    
+    header button:hover {
         color: map.get(map.get($color-pallete, 'dark'), 'accent');
     }
 
