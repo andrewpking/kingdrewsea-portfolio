@@ -44,8 +44,13 @@ header {
         padding: 0;
     }
 
+    ul li {
+        transition: filter 300ms ease;
+    }
+
     ul li:hover {
-        background-color: map.get(map.get($color-pallete, 'light'), 'grey-200');
+        background-color: rgba(map.get(map.get($color-pallete, 'light'), 'grey-200'), 0.5);
+        filter: drop-shadow(0 0 0.5rem rgba(map.get(map.get($color-pallete, 'light'), 'grey-200'), 0.5));
     }
 }
 
@@ -210,8 +215,13 @@ main.project-page ul li, main.project-page ol li {
     header {
         background-color: rgba(map.get(map.get($color-pallete, 'dark'), 'grey-100'), 0.9);
 
+        ul li {
+            transition: filter 300ms ease;
+        }
+    
         ul li:hover {
-            background-color: map.get(map.get($color-pallete, 'dark'), 'grey-200');
+            background-color: rgba(map.get(map.get($color-pallete, 'dark'), 'grey-200'), 0.5);
+            filter: drop-shadow(0 0 0.5rem rgba(map.get(map.get($color-pallete, 'dark'), 'grey-200'), 0.5));
         }
     }
 

@@ -43,7 +43,7 @@ export default function Header() {
                     >
                         <GiHamburgerMenu className="h-4 w-4" />
                     </button>
-                    <Link href="/" className='portfolio-title'>
+                    <Link href="/" className='portfolio-title md:hidden'>
                     <p className='text-center md:hidden'>Drew King&apos;s Portfolio</p>
                     </Link>
                     {/* Download resume button */}
@@ -51,6 +51,7 @@ export default function Header() {
                         href={'./Resume.pdf'}
                         target="_blank"
                         rel="noopener noreferrer"
+                        className='md:hidden'
                         download
                     >
                         <button className="md:hidden flex items-center">
@@ -58,7 +59,7 @@ export default function Header() {
                             aria-hidden="true"
                             size={16}
                             />
-                            <p className='sr-only'>Download Resume</p>
+                            <p className='md:hidden sr-only'>Download Resume</p>
                             </button>
                     </Link>
                     {/* Desktop menu */}
