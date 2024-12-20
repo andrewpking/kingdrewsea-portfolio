@@ -220,8 +220,6 @@ main.project-page ul, li {
     }
 
     header a.portfolio-title p {
-        line-height: 1rem;
-        font-weight: 500;
         color: map.get(map.get($color-pallete, 'dark'), 'grey-700');
     
         &:hover {
