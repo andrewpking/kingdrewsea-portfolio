@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="row-start-4 flex gap-6 flex-wrap items-center justify-center p-4">
-      <nav className='tiny:row-start-4 tiny:flex gap-6 tiny:flex-wrap' aria-label="Footer Navigation">
+      <nav className='sm:row-start-4 sm:flex gap-6 sm:flex-wrap' aria-label="Footer Navigation">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://linkedin.com/in/kingdrewsea"
