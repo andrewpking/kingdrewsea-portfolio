@@ -5,9 +5,9 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="row-start-4 flex gap-6 flex-wrap items-center justify-center p-4">
-      <nav className='sm:row-start-4 sm:flex gap-6 sm:flex-wrap' aria-label="Footer Navigation">
+      <nav className='sm:row-start-4 sm:flex gap-16 sm:flex-wrap' aria-label="Footer Navigation">
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          className="mb-4 sm:mb-0 flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://linkedin.com/in/kingdrewsea"
           target="_blank"
           rel="noopener noreferrer"
@@ -24,7 +24,7 @@ export default function Footer() {
         </a>
         
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          className="mb-4 sm:mb-0 flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://github.com/andrewpking"
           target="_blank"
           rel="noopener noreferrer"
@@ -42,7 +42,7 @@ export default function Footer() {
         </a>
         
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          className="mb-4 sm:mb-0 flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="mailto:drewpking@pm.me"
           aria-label="Send email"
         >
@@ -54,13 +54,12 @@ export default function Footer() {
           Email
         </a>
         <Link 
-          href={'./Resume.pdf'}  
-          target="_blank"  
-          rel="noopener noreferrer" 
-          locale={"false"} 
+          href={'./Resume.pdf'}
+          target="_blank"
+          rel="noopener noreferrer"
           download
         >
-          <button className="flex items-center gap-2 hover:underline hover:underline-offset-4">
+          <button className="mb-4 sm:mb-0 flex items-center gap-2 hover:underline hover:underline-offset-4">
           <MdOutlineNewspaper
             aria-hidden="true"
             size={16}
