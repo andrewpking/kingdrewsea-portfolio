@@ -219,7 +219,7 @@ main.project-page ul, li {
         color: map.get(map.get($color-pallete, 'dark'), 'accent');
     }
 
-    header a.portfolio-title {
+    header a.portfolio-title p {
         line-height: 1rem;
         font-weight: 500;
         color: map.get(map.get($color-pallete, 'dark'), 'grey-700');
