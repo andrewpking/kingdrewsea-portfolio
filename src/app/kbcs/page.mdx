@@ -1,7 +1,9 @@
 import { projects } from '../components/pages';
 import PageHeading from '../components/PageHeading';
 
-<PageHeading metadata={projects['/kbcs']} />
+export const metadata = projects['/kbcs'];
+
+<PageHeading metadata={metadata} />
 
 By [Sama Khalid][1], [Drew King][2], [Colin Xiao][3], and [Sophia Lin][4]
 
