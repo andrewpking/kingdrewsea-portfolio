@@ -1,14 +1,58 @@
+import ProjectTeamGallery from '../components/ProjectTeamGallery'
+import { YouTubeEmbed } from '@next/third-parties/google'
 import TrainBuilderDashboard from './components/Dashboard'
 import { projects } from '../components/pages';
 import PageHeading from '../components/PageHeading';
 
 export const metadata = projects['/high-speed-rail'];
 
+export const images = {
+  imageTeamPerson1: "/images/mindmii/Drew.png",
+  imageTeamPerson2: "/images/high-speed-rail/Joey.jpg",
+  imageTeamPerson3: "/images/high-speed-rail/Jack.jpg",
+};
+
 <PageHeading metadata={metadata} />
 
-The High Speed Rail project is a conceptual train builder for a high-speed rail system in the United States. The goal of the project is to provide a fast, efficient, and sustainable mode of transportation that connects major cities across the country. The project envisions a network of high-speed trains that travel at speeds of up to 300 miles per hour, making it possible to travel between cities in a matter of hours. We estimated the ridership by analyzing the population density and distance between major cities in the United States.
+## Team Members
 
-## Designing the System
+<ProjectTeamGallery
+    members={[
+      {
+        name: ["Drew King", "(They/Them)"],
+        photo: images.imageTeamPerson1,
+        // A default alt of "Photo of Team Person 1." will be generated.
+      },
+      {
+        name: ["Joey Kreuger", "(He/Him)"],
+        photo: images.imageTeamPerson2,
+        // A default alt of "Photo of Team Person 2." will be generated.
+      },
+      {
+        name: ["Jack Rosenbloom", "(He/Him)"],
+        photo: images.imageTeamPerson3,
+        // A default alt of "Photo of Team Person 3." will be generated.
+      },
+    ]}
+  />
+
+### Demo Video
+
+We created a video for the [High Speed Rail project](https://high-speed-rail-cse442-24au-fp-6a981c250f8bd8e994fe6608199c4157.pages.cs.washington.edu/) to showcase public opinion, why it's important, the conceptual trainbuilder and how we are visualizing this data.
+
+<YouTubeEmbed videoid="goHGTVUmz0M" />
+
+### Project Contributions
+
+- Joey Kreuger: Created the force directed graph visualization for public opinion data collected from [reddit r/transit](https://www.reddit.com/r/transit).
+- Jack Rosenbloom: Created the styles for the project.
+- Drew King: Created the train builder concept that [Dan Sutton](https://www.linkedin.com/in/daniel-sutton-a1b915263/) proposed including the data visualization and the [data prep](https://github.com/andrewpking/CensusStatisticalArea24).
+
+## Conceptual Train Builder for High-Speed Rail
+
+The High Speed Rail project includes a conceptual train builder I built for a high-speed rail system in the United States. The goal of the project is to provide a fast, efficient, and sustainable mode of transportation that connects major cities across the country. The project envisions a network of high-speed trains that travel at speeds of up to 300 miles per hour, making it possible to travel between cities in a matter of hours. We estimated the ridership by analyzing the population density and distance between major cities in the United States.
+
+### Designing the System
 
 This data visualization shows the proposed high-speed rail routes connecting major cities in the United States. The routes are color-coded based to indicate groups of connected cities.
 
@@ -38,4 +82,6 @@ The project was built using React, a JavaScript library for building user interf
 
 ### Deployment
 
-The [original High Speed Rail project](https://high-speed-rail-cse442-24au-fp-6a981c250f8bd8e994fe6608199c4157.pages.cs.washington.edu/) was deployed to gitlab pages with additional visualizations created by Joey Kreuger and styles by Jack Rosenbloom. We used a custom build script to generate the static files and deploy them to a web server using GitLab CI/CD.
+The original High Speed Rail project was deployed to gitlab pages with additional visualizations created by Joey Kreuger and styles by Jack Rosenbloom. We used a custom build script to generate the static files and deploy them to a web server using GitLab CI/CD.
+
+The Train Builder has been redeployed to this site for demonstration purposes using the same build script, modified for use with Next.js and deployed using Vercel. The [code for this visualization](https://github.com/andrewpking/kingdrewsea-portfolio/tree/main/src/app/high-speed-rail/components) can be found on my github inside of my portfolio repository.
