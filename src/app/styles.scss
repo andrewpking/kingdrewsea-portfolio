@@ -80,6 +80,22 @@ header button:hover {
     color: map.get(map.get($color-pallete, 'light'), 'accent');
 }
 
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    color: map.get(map.get($color-pallete, 'light'), 'grey-700');
+    background-color: map.get(map.get($color-pallete, 'light'), 'grey-100');
+    padding: 0.5rem;
+    border: 1px solid map.get(map.get($color-pallete, 'light'), 'grey-200');
+    border-radius: 0.25rem;
+
+    &:focus {
+        top: 0;
+        transition: top 0.3s ease-in-out;
+    }
+}
+
 .mobile-menu {
     background-color: rgba(map.get(map.get($color-pallete, 'light'), 'grey-100'), 0.8);
     backdrop-filter: blur(4px);
@@ -247,6 +263,12 @@ main.project-page ul li, main.project-page ol li {
     
     header button:hover {
         color: map.get(map.get($color-pallete, 'dark'), 'accent');
+    }
+
+    .skip-link {
+        color: map.get(map.get($color-pallete, 'dark'), 'grey-700');
+        background-color: map.get(map.get($color-pallete, 'dark'), 'grey-100');
+        border: 1px solid map.get(map.get($color-pallete, 'dark'), 'grey-200');
     }
 
     .mobile-menu {
