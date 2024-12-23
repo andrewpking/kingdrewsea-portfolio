@@ -11,14 +11,14 @@ export default function Header() {
     }));
 
     return (
-        <div className="relative">
-            <div className="h-16 md:h-20 fixed top-0 w-full z-50">
-                <a href="#main-content" 
-                    className="skip-link z-50">
+        <div>
+            <div className="h-16 md:h-20 w-full">
+                <a href="#main-content"
+                    className="skip-link">
                         Skip to main content
                 </a>
             </div>
-            <header className="w-full shadow-sm fixed top-0 z-40">
+            <header className="w-full shadow-sm fixed top-0 z-10">
                 <div className="max-w-7xl min-w-[100vw] py-2 md:py-0 mx-auto">
                     <Link href="/" className='portfolio-title hidden md:block md:my-4'>
                         <p className='ml-2 text-center'>Drew King&apos;s Portfolio</p>
