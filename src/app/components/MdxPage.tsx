@@ -6,7 +6,7 @@ interface MdxPageProps {
 
 export default function MdxPage ({ children }: MdxPageProps) {
     return (
-        <main className="project-page">
+        <main id="main-content" tabIndex={-1} className="project-page">
             {children}
         </main>
     );
