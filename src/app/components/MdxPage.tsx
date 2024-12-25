@@ -20,7 +20,8 @@ export const generateMetadata = (): Metadata => {
 
 export default function MdxPage({ children }: MdxPageProps) {
     return (
-        <main id="main-content" tabIndex={0} className="project-page">
+        <main id="main-content" tabIndex={0} className="project-page row-start-2 flex flex-col justify-center">
+            <div className="absolute h-16 md:h-20 w-full"></div>
             {children}
         </main>
     );
