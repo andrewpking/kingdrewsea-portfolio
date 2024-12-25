@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <div className="grid grid-rows-[20px_1fr_20px] sm:mt-4 font-[family-name:var(--font-geist-sans)]">
-        <main id="main-content" tabIndex={-1} className="row-start-2 flex flex-col items-center justify-center gap-6">
+        <main id="main-content" tabIndex={0} className="row-start-2 flex flex-col items-center justify-center gap-6">
           <h1 className="text-center">
             Drew King&apos;s Portfolio
           </h1>
