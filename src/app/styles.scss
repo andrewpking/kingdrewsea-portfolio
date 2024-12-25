@@ -105,7 +105,9 @@ header button:hover {
 }
 
 .image-head-container p {
-    font-size: 1.25em;
+    .caption{
+        font-size: 1.25em;
+    }
     color: map.get(map.get($color-pallete, 'light'), 'grey-900');
 }
 
