@@ -24,7 +24,7 @@ const PreviewCard: React.FC<PreviewCardProps> = ({ meta: metadata }) => {
                     className="object-cover"
                 />
             </div>
-            <div className="flex flex-col gap-2 p-4">
+            <div className="flex flex-col gap-2 p-4 card-text">
                 <h3 itemProp='name' className="font-semibold card-title">
                     {metadata.title}
                 </h3>

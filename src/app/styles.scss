@@ -147,6 +147,11 @@ main, main.project-page {
         transform-origin: left; // Maintain alignment
         transition: all 300ms ease; // Add base transition
         font-size: 1.25em; // Set initial size
+        margin: 0;
+    }
+
+    .card-text * {
+        padding: 0.25rem;
     }
     
     img {
