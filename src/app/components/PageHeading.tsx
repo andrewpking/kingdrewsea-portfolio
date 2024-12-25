@@ -22,7 +22,7 @@ export default function PageHeading ({metadata}: PageHeadingProps) {
                 />
                 <div className="absolute inset-0 overlay"></div>
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
-                    <h1 itemProp='name' className="text-4xl font-bold">
+                    <h1 id="main-content" itemProp='name' className="text-4xl font-bold">
                         {metadata.title}
                     </h1>
                     <time itemProp='dateCreated' className='hidden sm:block text-sm' dateTime={metadata.date}>{metadata.date}</time>
