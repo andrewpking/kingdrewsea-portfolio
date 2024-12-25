@@ -105,7 +105,9 @@ header button:hover {
 }
 
 .image-head-container p {
-    .caption{
+    &.caption{
+        padding: 0;
+        padding-top: 1rem;
         font-size: 1.25em;
     }
     color: map.get(map.get($color-pallete, 'light'), 'grey-900');
@@ -201,7 +203,7 @@ p {
 }
 
 main.project-page p {
-    margin: 1rem 0;
+    padding: 1rem 0;
 }
 
 main.project-page img {

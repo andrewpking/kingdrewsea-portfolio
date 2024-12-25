@@ -8,16 +8,16 @@ interface PageHeadingProps {
 export default function PageHeading ({metadata}: PageHeadingProps) {
     return (
         <div itemScope itemType ="https://schema.org/CreativeWork">
-            <div itemScope itemType='https://schema.org/ImageObject' className="image-head-container relative md:mt-20 md:pt-4 sm:mt-12 sm:pt-0">
+            <div itemScope itemType='https://schema.org/ImageObject' className="image-head-container relative md:mt-4 md:pt-4 sm:mt-12 sm:pt-0">
                 <Image 
                     itemProp='thumbnail'
                     fill={false}
                     src={metadata.image} 
                     alt={metadata.imageAlt} 
                     width={1120} 
-                    height={150}
+                    height={250}
                     sizes= "width: 100vw, height: 10vh"
-                    className="w-full h-[250px] md:h-[200px] object-cover"
+                    className="w-full h-[250px] object-cover"
                     priority
                 />
                 <div className="absolute inset-0 overlay"></div>
