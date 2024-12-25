@@ -40,7 +40,7 @@ header {
     background-color: rgba(map.get(map.get($color-pallete, 'light'), 'grey-100'), 0.9);
     padding: 0.5rem;
     
-    @media (min-width: 769px) {
+    @media (min-width: 777px) {
         padding: 0;
     }
 
