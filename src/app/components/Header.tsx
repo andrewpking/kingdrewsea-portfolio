@@ -19,11 +19,11 @@ export default function Header() {
                 </a>
             </div>
             <header className="w-full shadow-sm fixed top-0 z-10">
-                <div className="max-w-7xl min-w-[100vw] py-2 md:py-0 mx-auto">
+                <div className="max-w-7xl min-w-[100vw] py-2 sm:py-6 md:py-0 mx-auto">
                     <Link href="/" className='portfolio-title hidden md:block md:my-4'>
                         <p className='ml-2 text-center'>Drew King&apos;s Portfolio</p>
                     </Link>
-                    <nav aria-label="Main navigation" className="flex items-center justify-evenly md:justify-center h-auto">
+                    <nav aria-label="Main navigation" className="flex items-center h-0 justify-evenly md:justify-center md:h-auto">
                         {/* Desktop menu */}
                         <ul className="hidden md:flex md:max-w-7xl md:justify-center md:space-x-4 md:flex-1 md:justify-center md:grid-rows">
                             {navigationLinks.map((link) => (

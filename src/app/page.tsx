@@ -6,13 +6,13 @@ import "./styles.scss";
 export default function Home() {
   return (
     <div>
-      <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-        <main id="main-content" tabIndex={-1} className="row-start-2 flex flex-col items-center justify-center gap-6">
-          <h1 className="text-center">
-            Welcome to my portfolio!
+      <div className="grid grid-rows-[20px_1fr_20px] sm:mt-4 font-[family-name:var(--font-geist-sans)]">
+        <main className="row-start-2 flex flex-col items-center justify-center gap-6">
+          <h1 id="main-content" className="text-center">
+            Drew King&apos;s Portfolio
           </h1>
-          <p className="text-center">
-            My name is Drew and I am an aspring software engineer with a degree in Computer Science from the Paul G Allen School. I am passionate about creating software that is both beautiful and accessible. I have experience with a variety of technologies and am always looking to learn more. I am currently looking for a full-time software engineering role.
+          <p className="text-center tiny:px-4 sm:px-16">
+            I am an aspiring software engineer with a degree in Computer Science from the Paul G Allen School. I am passionate about creating software that is both beautiful and accessible. I have experience with a variety of technologies and am always learning. I am currently looking for a full-time UX Engineering role.
           </p>
           <h2 className="text-center">
             Projects

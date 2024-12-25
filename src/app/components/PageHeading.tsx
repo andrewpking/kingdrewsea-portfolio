@@ -7,33 +7,40 @@ interface PageHeadingProps {
 
 export default function PageHeading ({metadata}: PageHeadingProps) {
     return (
-        <>
-            <div className="image-head-container relative md:mt-20 md:pt-4 sm:mt-12 sm:pt-0">
+        <div itemScope itemType ="https://schema.org/CreativeWork">
+            <div itemScope itemType='https://schema.org/ImageObject' className="image-head-container relative md:mt-4 md:pt-4 sm:mt-12 sm:pt-0">
                 <Image 
+                    itemProp='thumbnail'
                     fill={false}
                     src={metadata.image} 
                     alt={metadata.imageAlt} 
                     width={1120} 
-                    height={150}
+                    height={250}
                     sizes= "width: 100vw, height: 10vh"
-                    className="w-full h-[250px] md:h-[200px] object-cover"
+                    className="w-full h-[250px] object-cover"
                     priority
                 />
                 <div className="absolute inset-0 overlay"></div>
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
-                    <h1 className="text-4xl font-bold">
+                    <h1 id="main-content" itemProp='name' className="text-4xl font-bold">
                         {metadata.title}
                     </h1>
-                    <p className="hidden sm:block text-center">
+                    <time itemProp='dateCreated' className='hidden sm:block text-sm' dateTime={metadata.date}>{metadata.date}</time>
+                    <p itemProp='caption' className="hidden sm:block text-center caption">
                         {metadata.description}
                     </p>
+                    <p itemProp='author' className='hidden sm:block text-center text-sm'>{metadata.authors}</p>
                 </div>
             </div>
         
             {/* Visible only on screens smaller than md */}
-            <p className="sm:hidden text-center px-4 py-6">
-                {metadata.description}
-            </p>
-        </>
+            <div className="sm:hidden flex flex-col items-center justify-center gap-1 py-6">
+                <time className='text-center' dateTime={metadata.date}>{metadata.date}</time>
+                <p itemProp='caption' className="text-center px-4">
+                    {metadata.description}
+                </p>
+                <p itemProp='authors' className='text-sm'>{metadata.authors}</p>
+            </div>
+        </div>
     )
 }

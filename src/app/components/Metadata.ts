@@ -4,4 +4,6 @@ export default interface PageMetadata {
     image: string;
     imageAlt: string;
     href: string;
+    date: string;
+    authors: string;
 }

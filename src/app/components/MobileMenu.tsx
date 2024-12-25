@@ -28,7 +28,7 @@ export default function MobileMenu ({navigationLinks: navigationLinks}: {navigat
     return (
         <div className='md:hidden'>
             {/* Mobile menu button */}
-            <nav aria-label="Main navigation" className="flex items-center justify-evenly h-auto">
+            <nav aria-label="Main navigation" className="flex items-center justify-between w-[80vw] mx-auto h-auto">
             <button 
                 className="md:hidden"
                 onClick={() => setIsOpen(!isOpen)}

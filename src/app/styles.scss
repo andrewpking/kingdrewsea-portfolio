@@ -40,7 +40,7 @@ header {
     background-color: rgba(map.get(map.get($color-pallete, 'light'), 'grey-100'), 0.9);
     padding: 0.5rem;
     
-    @media (min-width: 769px) {
+    @media (min-width: 777px) {
         padding: 0;
     }
 
@@ -105,7 +105,11 @@ header button:hover {
 }
 
 .image-head-container p {
-    font-size: 1.25em;
+    &.caption{
+        padding: 0;
+        padding-top: 1rem;
+        font-size: 1.25em;
+    }
     color: map.get(map.get($color-pallete, 'light'), 'grey-900');
 }
 
@@ -143,6 +147,11 @@ main, main.project-page {
         transform-origin: left; // Maintain alignment
         transition: all 300ms ease; // Add base transition
         font-size: 1.25em; // Set initial size
+        margin: 0;
+    }
+
+    .card-text * {
+        padding: 0.25rem;
     }
     
     img {
@@ -199,11 +208,11 @@ p {
 }
 
 main.project-page p {
-    margin: 1rem 0;
+    padding: 1rem 0;
 }
 
 main.project-page img {
-    margin: 2rem 0 0.5rem;
+    margin: 0 0 0.5rem;
 }
 
 main.project-page a {
