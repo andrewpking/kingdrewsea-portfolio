@@ -215,7 +215,7 @@ main.project-page img {
     margin: 0 0 0.5rem;
 }
 
-main.project-page a {
+main.project-page a, main a {
     color: map.get(map.get($color-pallete, 'light'), 'primary');
 }
 
@@ -372,7 +372,7 @@ main.project-page ul li, main.project-page ol li {
         color: map.get(map.get($color-pallete, 'dark'), 'grey-700')
     }
 
-    main.project-page a {
+    main.project-page a, main a {
         color: map.get(map.get($color-pallete, 'dark'), 'primary');
     }
 

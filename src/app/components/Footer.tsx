@@ -64,7 +64,7 @@ export default function Footer() {
             aria-hidden="true"
             size={16}
             />
-             Downlod Resume 
+             Download Resume
              </button>
         </Link>
       </nav>
