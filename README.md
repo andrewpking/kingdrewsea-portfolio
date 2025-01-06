@@ -16,7 +16,7 @@ If you use Brew as a package manager you can run the following command:
 brew install nvm
 ```
 
-Otherwise, you will need to follow the [install instructions in the NVM repository](https://github.com/nvm-sh/nvm)
+Otherwise, you will need to follow the [install instructions in the NVM repository](https://github.com/nvm-sh/nvm).
 
 Once you have installed Node Version Manager, ensure you have Node 20 installed:
 
