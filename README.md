@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 This is a personal portfolio developed in Next.js to showcase my experience with UX Engineering and data analytics. The homepage and GUI components are written in typescript with React. Each project is an MDX page found in the `src/app` directory inside of the subdirectory of each project and the file is named `page.mdx`.
 
-This project use the Next.js built in Router and is compiled with Turbopack. The resulting project is a website deployed to vercel. You can see the live site at [kingdrewsea.vercel.app](https://kingdrewsea.vercel.app).
+This project use the Next.js built in Router and is compiled with Turbopack. The resulting project is a website deployed to vercel. You can use the live site at [kingdrewsea.vercel.app](https://kingdrewsea.vercel.app).
 
 ## Run this project locally
 
