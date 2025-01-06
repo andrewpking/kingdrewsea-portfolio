@@ -8,11 +8,15 @@ This project use the Next.js built in Router and is compiled with Turbopack. The
 
 ## Run this project locally
 
-This project requires Node 20 or higher to run. If you use multiple versions of Node, please use **Node Version Manager**:
+This project requires Node 20 or higher to run. If you use multiple versions of Node, please use **Node Version Manager**.
+
+If you use Brew as a package manager you can run the following command:
 
 ```bash
 brew install nvm
 ```
+
+Otherwise, you will need to follow the [install instructions in the NVM repository](https://github.com/nvm-sh/nvm)
 
 Once you have installed Node Version Manager, ensure you have Node 20 installed:
 
