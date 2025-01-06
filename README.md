@@ -32,6 +32,12 @@ Once it has been installed, use this version (or higher) to run the project:
 nvm use 20
 ```
 
+Install all dependencies (ensure this command is run from the root of the project directory):
+
+```bash
+npm i
+```
+
 Then, run the development server:
 
 ```bash
