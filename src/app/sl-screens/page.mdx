@@ -7,12 +7,16 @@ export const metadata = projects['/sl-screens'];
 
 ## Abstract
 
-Clinical research trials often generate "big data"
+Clinical research trials often generate big data with many variables. This data is used to identify relationships between variables and outcomes. Machine learning is increasingly used to analyze this data. However, little is known about accuracy of the results of these algorithms. This research aims to establish guidelines for combining variable selection algorithms to assess accuracy in different cases. We found that using an ensemble of algorithms with the Lasso variable selection tool has accuracy issues with some types of datasets. The [preprint paper is available on arxiv.org](https://arxiv.org/abs/2311.03313). The methodology of this research will be available upon peer review.
+
+## Introduction
 
 * Examples: vaccine and cancer early detection research
-* Large number of participants = good
-* Large number of variables -> challenging
+* Large number of participants = good, however rare diseases make for small sample sizes.
+* Performing variable selection on these datasets is challenging because many tools are not designed for this type of data.
+
 Machine learning increasingly used in biomedical research
+
 * Helpful with a large number of variables
 * Can identify complex relationships with outcome of interest
 * Issue: performance can vary across algorithms
@@ -23,17 +27,37 @@ Potential solution: use an ensemble of algorithms
 Goal: establish guidelines around ensemble procedures
 Potential impact in vaccine, cancer research
 
-* Methodology of this research will be available upon peer review*
+## Contributions
+
+[Brian Williamsom, PhD](https://bdwilliamson.github.io/)
+
+* Designed the experiment
+* Wrote the simulation code in R
+* Mentored Drew and helped with the analysis code
+* Wrote the research paper and the abstract
+
+[Drew King, BSc](https://kingdrewsea.vercel.app/)
+
+* Collaborated with Brian on deploying the experiment to Linux a server cluster
+* Wrote code to aggregate experiment results in R using dplyr
+* Wrote the code to generate the preliminary plot in R using ggplot2
+* Designed a poster to present the research to MESA, an organization for minority students in STEM
+
+[Ying Huang, PhD](https://www.fredhutch.org/en/faculty-lab-directory/huang-ying.html)
+
+* Provided guidance on the experiment design
+* Provided guidance on the analysis code
+* Provided guidance on the research paper
 
 ## Results
 
-Lasso + SL not always a helpful combo; surprising result.
+Lasso + SL not always a helpful combo, this is a surprising result.
 
 ![SL with screens vs Lasso](/images/lasso_vs_sl.png)
 
-* SL with screens or SL with lasso and screens = safe choice
-* Lasso by itself = unreliable in most cases
-* Lasso + SL with no screens = unreliable in many cases
+* SL with screens or SL with lasso and screens is a safe choice for most datasets
+* Lasso by itself can be unreliable in most cases
+* Lasso + SL with no screens is unreliable in many cases
 
 ### Code will be available on GitHub once the paper is published
 
@@ -45,7 +69,8 @@ Train researchers to follow our guidelines + practices.
 Conduct further research including:
 
 * Building a study to address why the lasso alone is not ideal for variable selection
-* Testing other algorithms that process biomedical data.
+* Testing other algorithms that process biomedical data
 * Building this experiment in other programming language such as C or Python for better performance
+* Design interactive data visualization of results using D3.js
 
 Following publication, results will be replicable by others with scientific computing tools.
