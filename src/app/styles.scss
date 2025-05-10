@@ -1,33 +1,55 @@
-@use 'sass:map';
+@use "sass:map";
 
 /** Define global color pallete for light and dark mode **/
 $color-pallete: (
     light: (
-        primary: #9C27B0,    // Vivid magenta
-        secondary: #1976D2,   // Strong blue
-        accent: #E040FB,      // Bright magenta
-        success: #2E7D32,     // Dark green
-        danger: #D32F2F,      // Bright red
-        warning: #F57C00,     // Dark orange
-        info: #0288D1,        // Info blue
-        grey-100: #F5F5F5,    // Lightest grey
-        grey-200: #E0E0E0,    // Light grey
-        grey-700: #616161,    // Medium grey
-        grey-900: #212121     // Darkest grey
+        primary: #9c27b0,
+        // Vivid magenta
+        secondary: #1976d2,
+        // Strong blue
+        accent: #e040fb,
+        // Bright magenta
+        success: #2e7d32,
+        // Dark green
+        danger: #d32f2f,
+        // Bright red
+        warning: #f57c00,
+        // Dark orange
+        info: #0288d1,
+        // Info blue
+        grey-100: #f5f5f5,
+        // Lightest grey
+        grey-200: #e0e0e0,
+        // Light grey
+        grey-700: #616161,
+        // Medium grey
+        grey-900: #212121,
+        // Darkest grey
     ),
     dark: (
-        primary: #CE93D8,     // Light magenta
-        secondary: #64B5F6,   // Light blue
-        accent: #F48FB1,      // Light pink
-        success: #81C784,     // Light green
-        danger: #E57373,      // Light red
-        warning: #FFB74D,     // Light orange
-        info: #4FC3F7,        // Light info blue
-        grey-100: #212121,    // Darkest grey
-        grey-200: #424242,    // Dark grey
-        grey-700: #BDBDBD,    // Light grey
-        grey-900: #F5F5F5     // Lightest grey
-    )
+        primary: #ce93d8,
+        // Light magenta
+        secondary: #64b5f6,
+        // Light blue
+        accent: #f48fb1,
+        // Light pink
+        success: #81c784,
+        // Light green
+        danger: #e57373,
+        // Light red
+        warning: #ffb74d,
+        // Light orange
+        info: #4fc3f7,
+        // Light info blue
+        grey-100: #212121,
+        // Darkest grey
+        grey-200: #424242,
+        // Dark grey
+        grey-700: #bdbdbd,
+        // Light grey
+        grey-900: #f5f5f5,
+        // Lightest grey
+    ),
 );
 
 // Header styles
@@ -37,9 +59,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(map.get(map.get($color-pallete, 'light'), 'grey-100'), 0.9);
+    background-color: rgba(
+        map.get(map.get($color-pallete, "light"), "grey-100"),
+        0.9
+    );
     padding: 0.5rem;
-    
+
     @media (min-width: 777px) {
         padding: 0;
     }
@@ -48,101 +73,124 @@ header {
         transition: filter 300ms ease;
     }
 
+    ul li:focus-within,
     ul li:hover {
-        background-color: rgba(map.get(map.get($color-pallete, 'light'), 'grey-200'), 0.5);
-        filter: drop-shadow(0 0 0.5rem rgba(map.get(map.get($color-pallete, 'light'), 'grey-200'), 0.5));
+        background-color: rgba(
+            map.get(map.get($color-pallete, "light"), "grey-200"),
+            0.5
+        );
+        filter: drop-shadow(
+            0 0 0.5rem
+                rgba(map.get(map.get($color-pallete, "light"), "grey-200"), 0.5)
+        );
     }
 }
 
 header a {
-    color: map.get(map.get($color-pallete, 'light'), 'secondary');
+    color: map.get(map.get($color-pallete, "light"), "secondary");
 }
 
+header a:focus,
 header a:hover {
-    color: map.get(map.get($color-pallete, 'light'), 'info');
+    color: map.get(map.get($color-pallete, "light"), "info");
 }
 
 header a.portfolio-title {
     line-height: 1rem;
     font-weight: 500;
-    color: map.get(map.get($color-pallete, 'light'), 'grey-700');
+    color: map.get(map.get($color-pallete, "light"), "grey-700");
 
+    &:focus,
     &:hover {
-        color: map.get(map.get($color-pallete, 'light'), 'accent');
+        color: map.get(map.get($color-pallete, "light"), "accent");
     }
 }
 
 header button {
-    color: map.get(map.get($color-pallete, 'light'), 'grey-700');
+    color: map.get(map.get($color-pallete, "light"), "grey-700");
 }
 
+header button:focus,
 header button:hover {
-    color: map.get(map.get($color-pallete, 'light'), 'accent');
+    color: map.get(map.get($color-pallete, "light"), "accent");
 }
 
 .skip-link {
     position: absolute;
     top: -50px;
     left: 0;
-    color: map.get(map.get($color-pallete, 'light'), 'grey-900');
-    background-color: map.get(map.get($color-pallete, 'light'), 'grey-100');
+    color: map.get(map.get($color-pallete, "light"), "grey-900");
+    background-color: map.get(map.get($color-pallete, "light"), "grey-100");
     padding: 0.5rem;
-    border: 1px solid map.get(map.get($color-pallete, 'light'), 'grey-200');
+    border: 1px solid map.get(map.get($color-pallete, "light"), "grey-200");
     border-radius: 0.25rem;
     z-index: 1000;
 
-    &:focus {
+    &:focus,
+    &:hover {
         top: 0;
         transition: top 0.3s ease-in-out;
-        background-color: map.get(map.get($color-pallete, 'light'), 'grey-200');
+        background-color: map.get(map.get($color-pallete, "light"), "grey-200");
     }
 }
 
 .mobile-menu {
-    background-color: rgba(map.get(map.get($color-pallete, 'light'), 'grey-100'), 0.8);
+    background-color: rgba(
+        map.get(map.get($color-pallete, "light"), "grey-100"),
+        0.8
+    );
     backdrop-filter: blur(4px);
     transition: background-color 0.3s ease-in-out;
 }
 
 .image-head-container p {
-    &.caption{
+    &.caption {
         padding: 0;
         padding-top: 1rem;
         font-size: 1.25em;
     }
-    color: map.get(map.get($color-pallete, 'light'), 'grey-900');
+    color: map.get(map.get($color-pallete, "light"), "grey-900");
 }
 
 body {
-    background-color: map.get(map.get($color-pallete, 'light'), 'grey-100');
-    color: map.get(map.get($color-pallete, 'light'), 'grey-900');
+    background-color: map.get(map.get($color-pallete, "light"), "grey-100");
+    color: map.get(map.get($color-pallete, "light"), "grey-900");
 }
 
-main, main.project-page {
+main,
+main.project-page {
     margin: 0 auto;
     max-width: 70rem;
     padding: 1.25rem;
-    background-color: map.get(map.get($color-pallete, 'light'), 'grey-100');
+    background-color: map.get(map.get($color-pallete, "light"), "grey-100");
+}
+
+main a {
+    text-decoration: underline;
 }
 
 .overlay {
-    background-color: rgba(map.get(map.get($color-pallete, 'light'), 'grey-100'), 0.85);
+    background-color: rgba(
+        map.get(map.get($color-pallete, "light"), "grey-100"),
+        0.85
+    );
 }
 
 // Thanks Claude 3.5 sonnet for the card animation
 .card-content {
-    background-color: map.get(map.get($color-pallete, 'light'), 'grey-200');
+    background-color: map.get(map.get($color-pallete, "light"), "grey-200");
     transition: box-shadow 300ms ease;
-    box-shadow: 0 10px 12px -2px rgb(0 0 0 / 0.1), 
-                0 4px 5px -3px rgb(0 0 0 / 0.1);;
+    box-shadow:
+        0 10px 12px -2px rgb(0 0 0 / 0.1),
+        0 4px 5px -3px rgb(0 0 0 / 0.1);
 
     overflow: hidden; // Prevent content overflow
     transform-style: preserve-3d; // Help with Safari rendering
     will-change: transform; // Optimize performance
-    
+
     h3.card-title {
         font-size: 1.3em;
-        color: map.get(map.get($color-pallete, 'light'), 'info');
+        color: map.get(map.get($color-pallete, "light"), "info");
         transition: all 300ms ease;
         transform-origin: left; // Maintain alignment
         transition: all 300ms ease; // Add base transition
@@ -153,23 +201,31 @@ main, main.project-page {
     .card-text * {
         padding: 0.25rem;
     }
-    
+
     img {
         transition: transform 300ms ease; // Add base transition
         transform-origin: center; // Set transform origin
         transform: scale(1); // Set initial scale
     }
-    
+
+    &:focus,
     &:hover {
-        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 
-                   0 8px 10px -6px rgb(0 0 0 / 0.1);
+        box-shadow:
+            0 20px 25px -5px rgb(0 0 0 / 0.1),
+            0 8px 10px -6px rgb(0 0 0 / 0.1);
     }
 }
 
-// Hover effect for cards
+// Do not underline links on cards
+a.card-content {
+    text-decoration: none;
+}
+
+// Focus effect for cards
+.card-content:focus,
 .card-content:hover {
     h3.card-title {
-        color: map.get(map.get($color-pallete, 'light'), 'accent');
+        color: map.get(map.get($color-pallete, "light"), "accent");
         transform: scale(1.04);
     }
 
@@ -179,19 +235,23 @@ main, main.project-page {
 }
 
 .card-content p {
-    color: map.get(map.get($color-pallete, 'light'), 'grey-900');
+    color: map.get(map.get($color-pallete, "light"), "grey-900");
 }
 
 h1 {
     font-size: 1.5em;
     margin-bottom: 1rem;
-    color: map.get(map.get($color-pallete, 'light'), 'primary');
+    color: map.get(map.get($color-pallete, "light"), "primary");
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-size: 1.25em;
     margin: 0.75rem 0;
-    color: map.get(map.get($color-pallete, 'light'), 'secondary');
+    color: map.get(map.get($color-pallete, "light"), "secondary");
 }
 
 h3 {
@@ -204,7 +264,7 @@ h4 {
 
 p {
     font-size: 1em;
-    color: map.get(map.get($color-pallete, 'light'), 'grey-500');
+    color: map.get(map.get($color-pallete, "light"), "grey-500");
 }
 
 main.project-page p {
@@ -215,8 +275,13 @@ main.project-page img {
     margin: 0 0 0.5rem;
 }
 
-main.project-page a, main a {
-    color: map.get(map.get($color-pallete, 'light'), 'primary');
+main.project-page a,
+main a {
+    color: map.get(map.get($color-pallete, "light"), "primary");
+    &:focus,
+    &:hover {
+        color: map.get(map.get($color-pallete, "light"), "secondary");
+    }
 }
 
 main.project-page ul {
@@ -225,124 +290,165 @@ main.project-page ul {
     margin: 0.5rem 0;
 }
 
-main.project-page ul li, main.project-page ol li {
+main.project-page ul li,
+main.project-page ol li {
     margin-left: 0.75rem;
-    color: map.get(map.get($color-pallete, 'light'), 'grey-700')
+    color: map.get(map.get($color-pallete, "light"), "grey-700");
 }
 
-// Styles for d3 tooltip 
+// Underline styles for footer links
+footer a {
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+        text-underline-offset: 4px; // This is equivalent to underline-offset-4 in Tailwind
+    }
+}
+
+// Styles for d3 tooltip
 .tooltip {
     padding: 0.5rem;
-    background-color: map.get(map.get($color-pallete, 'light'), 'grey-100');
-    border: 1px solid map.get(map.get($color-pallete, 'light'), 'grey-200');
+    background-color: map.get(map.get($color-pallete, "light"), "grey-100");
+    border: 1px solid map.get(map.get($color-pallete, "light"), "grey-200");
     border-radius: 0.25rem;
 }
 
 @media (prefers-color-scheme: dark) {
     header {
-        background-color: rgba(map.get(map.get($color-pallete, 'dark'), 'grey-100'), 0.9);
+        background-color: rgba(
+            map.get(map.get($color-pallete, "dark"), "grey-100"),
+            0.9
+        );
 
         ul li {
             transition: filter 300ms ease;
         }
-    
+
+        ul li:focus-within,
         ul li:hover {
-            background-color: rgba(map.get(map.get($color-pallete, 'dark'), 'grey-200'), 0.5);
-            filter: drop-shadow(0 0 0.5rem rgba(map.get(map.get($color-pallete, 'dark'), 'grey-200'), 0.5));
+            background-color: rgba(
+                map.get(map.get($color-pallete, "dark"), "grey-200"),
+                0.5
+            );
+            filter: drop-shadow(
+                0 0 0.5rem
+                    rgba(
+                        map.get(map.get($color-pallete, "dark"), "grey-200"),
+                        0.5
+                    )
+            );
         }
     }
 
     header a {
-        color: map.get(map.get($color-pallete, 'dark'), 'secondary');
+        color: map.get(map.get($color-pallete, "dark"), "secondary");
     }
-    
+
+    header a:focus,
     header a:hover {
-        color: map.get(map.get($color-pallete, 'dark'), 'info');
+        color: map.get(map.get($color-pallete, "dark"), "info");
     }
 
     header a.portfolio-title p {
-        color: map.get(map.get($color-pallete, 'dark'), 'grey-700');
-    
+        color: map.get(map.get($color-pallete, "dark"), "grey-700");
+
+        &:focus,
         &:hover {
-            color: map.get(map.get($color-pallete, 'dark'), 'accent');
+            color: map.get(map.get($color-pallete, "dark"), "accent");
         }
     }
-    
+
     header button {
-        color: map.get(map.get($color-pallete, 'dark'), 'grey-700');
+        color: map.get(map.get($color-pallete, "dark"), "grey-700");
     }
-    
+
+    header button:focus,
     header button:hover {
-        color: map.get(map.get($color-pallete, 'dark'), 'accent');
+        color: map.get(map.get($color-pallete, "dark"), "accent");
     }
 
     .skip-link {
-        color: map.get(map.get($color-pallete, 'dark'), 'grey-700');
-        background-color: map.get(map.get($color-pallete, 'dark'), 'grey-100');
-        border: 1px solid map.get(map.get($color-pallete, 'dark'), 'grey-200');
+        color: map.get(map.get($color-pallete, "dark"), "grey-700");
+        background-color: map.get(map.get($color-pallete, "dark"), "grey-100");
+        border: 1px solid map.get(map.get($color-pallete, "dark"), "grey-200");
 
-        &:focus {
-            background-color: map.get(map.get($color-pallete, 'dark'), 'grey-200');
+        &:focus,
+        &:hover {
+            background-color: map.get(
+                map.get($color-pallete, "dark"),
+                "grey-200"
+            );
         }
     }
 
     .mobile-menu {
-        background-color: rgba(map.get(map.get($color-pallete, 'dark'), 'grey-100'), 0.8);
+        background-color: rgba(
+            map.get(map.get($color-pallete, "dark"), "grey-100"),
+            0.8
+        );
     }
 
     .image-head-container p {
-        color: map.get(map.get($color-pallete, 'dark'), 'grey-900');
+        color: map.get(map.get($color-pallete, "dark"), "grey-900");
     }
 
     body {
-        background-color: map.get(map.get($color-pallete, 'dark'), 'grey-100');
-        color: map.get(map.get($color-pallete, 'dark'), 'grey-900');
+        background-color: map.get(map.get($color-pallete, "dark"), "grey-100");
+        color: map.get(map.get($color-pallete, "dark"), "grey-900");
     }
 
-    main, main.project-page {
-        background-color: map.get(map.get($color-pallete, 'dark'), 'grey-100');
+    main,
+    main.project-page {
+        background-color: map.get(map.get($color-pallete, "dark"), "grey-100");
     }
 
     .overlay {
-        background-color: rgba(map.get(map.get($color-pallete, 'dark'), 'grey-100'), 0.85);
+        background-color: rgba(
+            map.get(map.get($color-pallete, "dark"), "grey-100"),
+            0.85
+        );
     }
 
     // Thanks Claude 3.5 sonnet for the card animation
     .card-content {
-        background-color: map.get(map.get($color-pallete, 'dark'), 'grey-200');
+        background-color: map.get(map.get($color-pallete, "dark"), "grey-200");
         transition: box-shadow 300ms ease;
-        box-shadow: 0 10px 12px -2px rgb(0 0 0 / 0.1), 
-                    0 4px 5px -3px rgb(0 0 0 / 0.1);;
+        box-shadow:
+            0 10px 12px -2px rgb(0 0 0 / 0.1),
+            0 4px 5px -3px rgb(0 0 0 / 0.1);
 
         overflow: hidden; // Prevent content overflow
         transform-style: preserve-3d; // Help with Safari rendering
         will-change: transform; // Optimize performance
-        
+
         h3.card-title {
             font-size: 1.3em;
-            color: map.get(map.get($color-pallete, 'dark'), 'info');
+            color: map.get(map.get($color-pallete, "dark"), "info");
             transition: all 300ms ease;
             transform-origin: left; // Maintain alignment
             transition: all 300ms ease; // Add base transition
             font-size: 1.25em; // Set initial size
         }
-        
+
         img {
             transition: transform 300ms ease; // Add base transition
             transform-origin: center; // Set transform origin
             transform: scale(1); // Set initial scale
         }
-        
+
+        &:focus,
         &:hover {
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 
-                    0 8px 10px -6px rgba(0, 0, 0, 0.2);
+            box-shadow:
+                0 20px 25px -5px rgba(0, 0, 0, 0.2),
+                0 8px 10px -6px rgba(0, 0, 0, 0.2);
         }
     }
 
-    // Hover effect for cards
+    // Focus effect for cards
+    .card-content:focus,
     .card-content:hover {
         h3.card-title {
-            color: map.get(map.get($color-pallete, 'dark'), 'accent');
+            color: map.get(map.get($color-pallete, "dark"), "accent");
             transform: scale(1.04);
         }
 
@@ -352,32 +458,42 @@ main.project-page ul li, main.project-page ol li {
     }
 
     .card-content p {
-        color: map.get(map.get($color-pallete, 'dark'), 'grey-900');
+        color: map.get(map.get($color-pallete, "dark"), "grey-900");
     }
 
     h1 {
-        color: map.get(map.get($color-pallete, 'dark'), 'primary');
+        color: map.get(map.get($color-pallete, "dark"), "primary");
     }
 
-    h2, h3, h4, h5, h6 {
-        color: map.get(map.get($color-pallete, 'dark'), 'secondary');
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: map.get(map.get($color-pallete, "dark"), "secondary");
     }
 
     p {
-        color: map.get(map.get($color-pallete, 'dark'), 'grey-700');
+        color: map.get(map.get($color-pallete, "dark"), "grey-700");
     }
 
-    main.project-page ul li, main.project-page ol li {
+    main.project-page ul li,
+    main.project-page ol li {
         margin-left: 0.75rem;
-        color: map.get(map.get($color-pallete, 'dark'), 'grey-700')
+        color: map.get(map.get($color-pallete, "dark"), "grey-700");
     }
 
-    main.project-page a, main a {
-        color: map.get(map.get($color-pallete, 'dark'), 'primary');
+    main.project-page a,
+    main a {
+        color: map.get(map.get($color-pallete, "dark"), "primary");
+        &:focus,
+        &:hover {
+            color: map.get(map.get($color-pallete, "dark"), "secondary");
+        }
     }
 
     .tooltip {
-        background-color: map.get(map.get($color-pallete, 'dark'), 'grey-100');
-        border: 1px solid map.get(map.get($color-pallete, 'dark'), 'grey-200');
+        background-color: map.get(map.get($color-pallete, "dark"), "grey-100");
+        border: 1px solid map.get(map.get($color-pallete, "dark"), "grey-200");
     }
 }
