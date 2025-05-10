@@ -7,7 +7,9 @@ export const metadata = projects['/sl-screens'];
 
 ## Abstract
 
-Clinical research trials often generate large datasets with many variables, which are analyzed to identify potential relationships with clinical outcomes. Machine learning techniques are increasingly employed for such analyses, yet little is known about the accuracy of these algorithms in different settings. This research aims to establish guidelines for combining variable selection algorithms to assess accuracy under various conditions. Our findings indicate that using an ensemble of algorithms with the Lasso variable selection tool can produce inconsistent accuracy with certain types of datasets. [A preprint of this work is available on arxiv.org](https://arxiv.org/abs/2311.03313). The methodology will be shared upon peer review.
+Clinical research trials often generate large datasets with many variables, which are analyzed to identify potential relationships with clinical outcomes. Machine learning techniques are increasingly employed for such analyses, yet little is known about the accuracy of these algorithms in different settings. This research aims to establish guidelines for combining variable selection algorithms to assess accuracy under various conditions. Our findings indicate that using an ensemble of algorithms with the Lasso variable selection tool can produce inconsistent accuracy with certain types of datasets. [This research was published to The New England Journal of Statistics in Data Science](https://doi.org/10.51387/25-NEJSDS82) on May 7th 2025, additionally the [paper is available with open access on arXiv.org](https://arxiv.org/abs/2311.03313). The experiment can be reproduced using [simulation code on GitHub](https://github.com/bdwilliamson/sl_screening_supplementary) written by Doctor Brian Williamson.
+
+**Note:** All code is open-source under the MIT licene.
 
 ## Introduction
 
@@ -23,8 +25,8 @@ Despite these challenges, machine learning has become a mainstay in biomedical r
 - Authored the research paper and abstract.
 
 ### [Drew King, BSc](https://kingdrewsea.vercel.app/)
-- Collaborated on deploying the experiment to a Linux server cluster.
-- Created R scripts (with **dplyr** and **ggplot2**) to aggregate and visualize results.
+- Collaborated on deploying the experiment to a Linux server cluster using **bash**.
+- Created R scripts (with **tidyr**, **dplyr**, and **ggplot2**) to aggregate and visualize results.
 - Designed a poster to present the research to MESA (an organization for minority students in STEM).
 
 ### [Ying Huang, PhD](https://www.fredhutch.org/en/faculty-lab-directory/huang-ying.html)
@@ -41,8 +43,6 @@ Our preliminary analysis shows that **Lasso + Super Learner (SL) is not always a
 
 ![SL with screens vs Lasso](/images/lasso_vs_sl.png)
 
-**Note:** All code will be open-sourced under the MIT license on GitHub once the paper is published.
-
 ## Next Steps
 
 We plan to train researchers on applying these ensemble guidelines and continue developing our methods. Future work includes:
@@ -52,4 +52,4 @@ We plan to train researchers on applying these ensemble guidelines and continue 
 - Rewriting the experiment in faster languages (e.g., C or Python) for improved performance.
 - Designing interactive data visualizations using D3.js to facilitate more intuitive result exploration.
 
-Once published, our results will be fully reproducible with standard scientific computing tools, allowing others to validate and extend our findings.
+Our results are fully reproducible with standard scientific computing tools in R, allowing others to validate and extend our findings.
