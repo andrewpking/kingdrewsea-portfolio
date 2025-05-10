@@ -1,17 +1,16 @@
-import Image from 'next/image';
-import { MdEmail, MdOutlineNewspaper } from 'react-icons/md';
-import Link from 'next/link';
+import Image from "next/image";
+import { MdEmail, MdOutlineNewspaper } from "react-icons/md";
+import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer className="row-start-4 flex gap-6 flex-wrap items-center justify-center p-4">
-      <nav className='sm:row-start-4 sm:flex gap-16 sm:flex-wrap' aria-label="Footer Navigation">
+      <nav className="sm:row-start-4 sm:flex gap-16 sm:flex-wrap">
         <a
-          className="mb-4 sm:mb-0 flex items-center gap-2 hover:underline hover:underline-offset-4"
+          className="mb-4 sm:mb-0 flex items-center gap-2"
           href="https://linkedin.com/in/kingdrewsea"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Visit LinkedIn Profile"
         >
           <Image
             src="/images/LinkedIn.png"
@@ -22,13 +21,12 @@ export default function Footer() {
           />
           LinkedIn
         </a>
-        
+
         <a
-          className="mb-4 sm:mb-0 flex items-center gap-2 hover:underline hover:underline-offset-4"
+          className="mb-4 sm:mb-0 flex items-center gap-2"
           href="https://github.com/andrewpking"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Visit GitHub Profile"
         >
           <Image
             src="/images/github.svg"
@@ -40,32 +38,24 @@ export default function Footer() {
           />
           GitHub
         </a>
-        
+
         <a
-          className="mb-4 sm:mb-0 flex items-center gap-2 hover:underline hover:underline-offset-4"
+          className="mb-4 sm:mb-0 flex items-center gap-2"
           href="mailto:drewpking@pm.me"
-          aria-label="Send email"
         >
-          <MdEmail
-              aria-hidden="true"
-              size={16}
-          />
-          
+          <MdEmail aria-hidden="true" size={16} />
           Email
         </a>
-        <Link 
-          href={'./Resume.pdf'}
+        <Link
+          href={"./Resume.pdf"}
           target="_blank"
           rel="noopener noreferrer"
           download
         >
-          <button className="mb-4 sm:mb-0 flex items-center gap-2 hover:underline hover:underline-offset-4">
-          <MdOutlineNewspaper
-            aria-hidden="true"
-            size={16}
-            />
-             Download Resume
-             </button>
+          <div className="mb-4 sm:mb-0 flex items-center gap-2">
+            <MdOutlineNewspaper aria-hidden="true" size={16} />
+            Download Resume
+          </div>
         </Link>
       </nav>
     </footer>
