@@ -47,14 +47,14 @@ export default function Footer() {
           Email
         </a>
         <Link
-          href={"./Resume.pdf"}
+          href={"./Drew_King-CV.pdf"}
           target="_blank"
           rel="noopener noreferrer"
           download
         >
           <div className="mb-4 sm:mb-0 flex items-center gap-2">
             <MdOutlineNewspaper aria-hidden="true" size={16} />
-            Download Resume
+            Download CV (Resume)
           </div>
         </Link>
       </nav>
