@@ -10,6 +10,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: url + "/about",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: url + "/projects",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: url + "/projects/high-speed-rail",
       lastModified: new Date(),
       changeFrequency: "monthly",
@@ -35,6 +47,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: url + "/projects/sl-screens",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: url + "/Drew_King-CV.pdf",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.5,
