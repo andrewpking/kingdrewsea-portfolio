@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main>
       <h1 className="text-4xl font-bold mb-8">Projects</h1>
-      <p className="text-lg text-gray-700 mb-8">
+      <p className="text-lg mb-8">
         Drew has worked on a variety of projects throughout their career. Here
         are some of their most notable projects:
       </p>
