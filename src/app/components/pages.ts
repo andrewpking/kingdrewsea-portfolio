@@ -37,7 +37,7 @@ const pages: Record<string, PageMetadata> = {
     description: "My CV",
     image: "",
     imageAlt: "",
-    href: "/Drew_King-cv.pdf",
+    href: "/Drew_King-CV.pdf",
     date: "2025-06-15",
     authors: "Drew King",
   },
