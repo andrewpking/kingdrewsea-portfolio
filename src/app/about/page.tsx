@@ -6,7 +6,7 @@ export default function Home() {
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="lg:grid lg:grid-cols-[1fr,400px] lg:gap-8">
         <main className="flex flex-col gap-6 font-[family-name:var(--font-geist-sans)]">
-          <h1 id="main-content" className="text-center lg:text-left">
+          <h1 id="main-content" className="text-4xl font-bold mb-8">
             About
           </h1>
           <p>
