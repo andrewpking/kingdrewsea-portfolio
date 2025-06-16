@@ -44,7 +44,7 @@ const pages: Record<string, PageMetadata> = {
 };
 
 const projects: Record<string, PageMetadata> = {
-  "/high-speed-rail": {
+  HighSpeedRail: {
     title: "High Speed Rail",
     description: "Visualization reimagining the future of travel",
     image: "/images/high-speed-rail-cover.png",
@@ -54,7 +54,7 @@ const projects: Record<string, PageMetadata> = {
     date: "2024-12-15",
     authors: "Drew King, Joey Krueger, Jack Rosenbloom",
   },
-  "/kbcs": {
+  kbcs: {
     title: "KBCS Theme",
     description: "WordPress theme update following accessibility principles",
     image: "/images/KBCS_Menu-Bar_Flow.png",
@@ -64,7 +64,7 @@ const projects: Record<string, PageMetadata> = {
     date: "2024-12-15",
     authors: "Drew King, Sama Khalid, Colin Xiao, Sophia Lin",
   },
-  "/mindmii": {
+  MindMii: {
     title: "MindMii",
     description: "Talk calmly, when you're ready.",
     image: "/images/mindmii/MindMii_Cover.png",
@@ -74,7 +74,7 @@ const projects: Record<string, PageMetadata> = {
     date: "2024-03-07",
     authors: "Drew King, Lee Janzen, Christoph Bendix",
   },
-  "/resitogether": {
+  ResiTogether: {
     title: "ResiTogether",
     description:
       "App prototype to improve employment among formerly incarcerated persons",
@@ -86,7 +86,7 @@ const projects: Record<string, PageMetadata> = {
     authors:
       "Drew King, Weather Nguyen, Taylor Richmond, Julie McUne, Jessica Wang",
   },
-  "/sl-screens": {
+  SLScreens: {
     title: "SL Screens",
     description: "Investigating the use of screens in Super Learner ensembles",
     image: "/images/lasso_vs_sl.png",
