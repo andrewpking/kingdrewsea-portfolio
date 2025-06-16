@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { MdEmail, MdOutlineNewspaper } from "react-icons/md";
-import Link from "next/link";
+import { MdEmail } from "react-icons/md";
 
 export default function Footer() {
   return (
@@ -46,17 +45,6 @@ export default function Footer() {
           <MdEmail aria-hidden="true" size={16} />
           Email
         </a>
-        <Link
-          href={"./Drew_King-CV.pdf"}
-          target="_blank"
-          rel="noopener noreferrer"
-          download
-        >
-          <div className="mb-4 sm:mb-0 flex items-center gap-2">
-            <MdOutlineNewspaper aria-hidden="true" size={16} />
-            Download CV (Resume)
-          </div>
-        </Link>
       </nav>
     </footer>
   );
