@@ -3,7 +3,7 @@ import "../styles.scss";
 
 export default function Home() {
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="lg:container mx-auto px-6 sm:px-2 lg:px-8 py-8">
       <div className="lg:grid lg:grid-cols-[1fr,400px] lg:gap-8">
         <main className="flex flex-col gap-6 font-[family-name:var(--font-geist-sans)]">
           <h1 id="main-content" className="text-4xl font-bold mb-8">
@@ -32,7 +32,7 @@ export default function Home() {
             As a firm believer in accessibility, Drew was the Co-Chair of a
             student organization whose mission was to foster a culture of
             inclusion for people with disabilities in the Allen School and
-            educate students about creating accessible software. As Co-Chair of
+            educate students about creating accessible software. As Co-Chair of{" "}
             <a href="https://ability.cs.washington.edu/">Ability</a>, Drew
             educated the team about accessible document creation and started a
             book club. Drew collaborated with a peer, Lee Janzen-Morel, on an
@@ -64,7 +64,7 @@ export default function Home() {
         </main>
         <aside className="mt-8 lg:mt-0">
           <div className="sticky top-4">
-            <BlueskyTimeline feedUrl="https://embedbsky.com/feeds/a41fb0eee986d380449f9a22cc7cb8091bc06cf810b4194b3a38279ed633516e.html" />
+            <BlueskyTimeline feedUrl="https://embedbsky.com/feeds/fa5c0936fa2155b9866b43b6f00f89ef867f4216b75e7cd68c68ba113f9df8c4.html" />
           </div>
         </aside>
       </div>
