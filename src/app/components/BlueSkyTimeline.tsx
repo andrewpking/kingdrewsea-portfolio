@@ -60,7 +60,7 @@ const BlueskyTimeline: React.FC<BlueskyTimelineProps> = ({
   return (
     <div
       ref={containerRef}
-      className="w-96 bg-white rounded-lg shadow-md p-4"
+      className="w-80 bg-white rounded-lg shadow-md p-4"
       style={{
         height: `${height}px`,
       }}
