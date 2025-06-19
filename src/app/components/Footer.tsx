@@ -40,7 +40,24 @@ export default function Footer() {
 
         <a
           className="mb-4 sm:mb-0 flex items-center gap-2"
-          href="mailto:drewpking@pm.me"
+          href="https://bsky.app/profile/drewking.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="/images/Bluesky_Logo.svg"
+            alt="Bluesky logo"
+            width={16}
+            height={16}
+            aria-hidden="true"
+            className="transition-[filter] duration-300"
+          />
+          Bluesky
+        </a>
+
+        <a
+          className="mb-4 sm:mb-0 flex items-center gap-2"
+          href="mailto:me@drewking.dev"
         >
           <MdEmail aria-hidden="true" size={16} />
           Email
