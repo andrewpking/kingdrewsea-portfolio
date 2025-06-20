@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1080 1080" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;">
+<title>Drew King Portfolio Icon</title>
+<desc>A pink and orange gradient icon that has rounded corners with a white triangle inside.</desc>
+    <path id="Rounded-Rectangle" d="M13,785C13,933.565 133.435,1054 282,1054L798,1054C946.565,1054 1067,933.565 1067,785L1067,269C1067,120.435 946.565,0 798,0L282,0C133.435,0 13,120.435 13,269L13,785Z" style="fill:url(#_Linear1);"/>
+    <path id="Triangle" d="M539.253,793L889.742,262L188.763,262L539.253,793Z" style="fill:white;fill-opacity:0.06;stroke:url(#_Radial2);stroke-width:72px;"/>
+    <defs>
+        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(6.4676e-14,1056.24,-1056.24,6.4676e-14,548.343,-0.361399)"><stop offset="0" style="stop-color:rgb(225,213,224);stop-opacity:0.64"/><stop offset="0" style="stop-color:rgb(255,109,38);stop-opacity:1"/><stop offset="0.25" style="stop-color:rgb(206,113,61);stop-opacity:1"/><stop offset="0.69" style="stop-color:rgb(220,67,67);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(182,38,186);stop-opacity:1"/></linearGradient>
+        <radialGradient id="_Radial2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-350.49,-0,0,-350.49,539.253,527.5)"><stop offset="0" style="stop-color:rgb(220,189,214);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(227,208,226);stop-opacity:1"/></radialGradient>
+    </defs>
+</svg>
