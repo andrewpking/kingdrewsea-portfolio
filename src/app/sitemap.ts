@@ -4,7 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const url = "https://drewking.dev";
   return [
     {
-      url: url + "/",
+      url: url,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
