@@ -17,7 +17,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Drew King - Portfolio",
-  description: "Recent UW Computer Science Grad showcasing my work and experience as a UX engineer.",
+  description:
+    "Recent UW Computer Science Grad showcasing my work and experience as a UX engineer.",
+  metadataBase: new URL("https://drewking.dev"),
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({
@@ -27,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <GoogleAnalytics gaId="G-X2CZ5K9B39" />
+      <GoogleAnalytics gaId="G-X2CZ5K9B39" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

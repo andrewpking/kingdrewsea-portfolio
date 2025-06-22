@@ -1,5 +1,15 @@
 import BlueskyTimeline from "../components/BlueSkyTimeline";
 import "../styles.scss";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About - Drew King",
+  description:
+    "Learn more about Drew King, a software engineer passionate about accessibility and inclusive design",
+  alternates: {
+    canonical: "/about",
+  },
+};
 
 export default function Home() {
   return (

@@ -1,6 +1,16 @@
 import Project from "../components/Project";
 import { projects } from "../components/pages";
 import "../styles.scss";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects - Drew King",
+  description:
+    "Explore Drew King's portfolio of software engineering and UX design projects",
+  alternates: {
+    canonical: "/projects",
+  },
+};
 
 export default function Home() {
   return (
