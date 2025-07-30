@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import DOMPurify from "dompurify";
 
 interface BlueskyTimelineProps {
   feedUrl: string;
@@ -44,7 +45,14 @@ const BlueskyTimeline: React.FC<BlueskyTimelineProps> = ({
 
       try {
         const html = await getHtml(urlWithTimestamp);
-        containerRef.current.innerHTML = html;
+        const cfg = {
+          ALLOW_TAGS: ["div", "p", "a", "img", "video"],
+          FORBID_TAGS: ["script", "iframe", "style"],
+          FORBID_ATTR: ["style"],
+          ALLOW_DATA_ATTR: false,
+        };
+        const sanitizedHTML = DOMPurify.sanitize(html, cfg);
+        containerRef.current.innerHTML = sanitizedHTML;
       } catch (error) {
         console.error("Error fetching Bluesky timeline:", error);
         if (containerRef.current) {
