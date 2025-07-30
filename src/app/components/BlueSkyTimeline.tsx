@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { JSDOM } from "jsdom";
 import DOMPurify from "dompurify";
 
 interface BlueskyTimelineProps {
