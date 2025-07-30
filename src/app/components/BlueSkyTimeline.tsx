@@ -47,7 +47,6 @@ const BlueskyTimeline: React.FC<BlueskyTimelineProps> = ({
         const html = await getHtml(urlWithTimestamp);
         const cfg = {
           ALLOW_TAGS: ["div", "p", "a", "img", "video"],
-          FORBID_TAGS: ["script", "iframe", "style"],
           FORBID_ATTR: ["style"],
           ALLOW_DATA_ATTR: false,
         };
