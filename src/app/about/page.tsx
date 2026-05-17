@@ -1,21 +1,37 @@
 import BlueskyTimeline from "../components/BlueSkyTimeline";
 import "../styles.scss";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "About - Drew King",
-  description:
-    "Learn more about Drew King, a software engineer passionate about accessibility and inclusive design",
-  alternates: {
-    canonical: "/about",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "About - Drew King",
+    description:
+      "Learn more about Drew King, a software engineer passionate about accessibility and inclusive design",
+    alternates: {
+      canonical: "/about",
+    },
+    openGraph: {
+      type: "profile",
+      title: "About - Drew King",
+      description:
+        "Learn more about Drew King, a software engineer passionate about accessibility and inclusive design",
+      locale: "en_US",
+      siteName: "Drew King - Portfolio",
+    },
+    twitter: {
+      card: "summary",
+      title: "About - Drew King",
+      description:
+        "Learn more about Drew King, a software engineer passionate about accessibility and inclusive design",
+    },
+  };
+}
 
 export default function Home() {
   return (
     <div className="lg:container mx-auto px-6 sm:px-2 lg:px-8 py-8">
       <div className="lg:grid lg:grid-cols-[1fr,400px] lg:gap-8">
-        <main className="flex flex-col gap-6 font-[family-name:var(--font-geist-sans)]">
+        <div className="flex flex-col gap-6 font-[family-name:var(--font-geist-sans)]">
           <h1 id="main-content" className="text-4xl font-bold mb-8">
             About
           </h1>
@@ -71,7 +87,7 @@ export default function Home() {
             . Drew also runs a personal bluesky account where they talk about
             their experiences as a technologist.
           </p>
-        </main>
+        </div>
         <aside className="mt-8 lg:mt-0">
           <div className="sticky top-4">
             <BlueskyTimeline feedUrl="https://embedbsky.com/feeds/fa5c0936fa2155b9866b43b6f00f89ef867f4216b75e7cd68c68ba113f9df8c4.html" />

@@ -1,25 +1,53 @@
 import Project from "../components/Project";
 import { projects } from "../components/pages";
 import "../styles.scss";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Projects - Drew King",
-  description:
-    "Explore Drew King's portfolio of software engineering and UX design projects",
-  alternates: {
-    canonical: "/projects",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Projects - Drew King",
+    description:
+      "Explore Drew King's portfolio of software engineering and UX design projects",
+    alternates: {
+      canonical: "/projects",
+    },
+    openGraph: {
+      type: "website",
+      title: "Projects - Drew King",
+      description:
+        "Explore Drew King's portfolio of software engineering and UX design projects",
+      locale: "en_US",
+      siteName: "Drew King - Portfolio",
+    },
+    twitter: {
+      card: "summary",
+      title: "Projects - Drew King",
+      description:
+        "Explore Drew King's portfolio of software engineering and UX design projects",
+    },
+  };
+}
 
 export default function Home() {
   return (
-    <main>
+    <>
       <h1 className="text-4xl font-bold mb-8">Projects</h1>
       <p className="text-lg mb-8">
         Drew has worked on a variety of projects throughout their career. Here
         are some of their most notable projects:
       </p>
+      <Project metadata={projects.win11}>
+        <p>
+          This guide documents the full process of performing a clean,
+          bloat-free Windows 11 installation across PC and Intel Mac hardware.
+          It covers everything from disabling BitLocker and FileVault before
+          install, to exporting drivers with DISM, fetching Boot Camp drivers
+          without macOS using a Python 3 script, and re-injecting drivers
+          post-install via pnputil. Originally written to help a family member,
+          it evolved into a comprehensive technical reference covering edge
+          cases most guides skip entirely.
+        </p>
+      </Project>
       <Project metadata={projects.kbcs}>
         <p>
           Drew is currently an operations support specialist at KBCS, building
@@ -77,6 +105,6 @@ export default function Home() {
           selection algorithms to assess accuracy under various conditions.
         </p>
       </Project>
-    </main>
+    </>
   );
 }

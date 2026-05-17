@@ -1,9 +1,9 @@
 import Link from "next/link";
-import PageMetadata from "./Metadata";
+import { type ProjectData } from "./pages";
 import Image from "next/image";
 
 interface ProjectProps {
-  metadata: PageMetadata;
+  metadata: ProjectData;
   children: React.ReactNode;
 }
 

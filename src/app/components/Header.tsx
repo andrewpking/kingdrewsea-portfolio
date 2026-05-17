@@ -1,12 +1,11 @@
 import Link from "next/link";
-import { pages } from "./pages";
-import PageMetadata from "./Metadata";
+import { navLinks } from "./pages";
 import MobileMenu from "./MobileMenu";
 
 export default function Header() {
-  const navigationLinks = Object.values(pages).map((project: PageMetadata) => ({
-    href: project.href,
-    text: project.title,
+  const navigationLinks = navLinks.map((link) => ({
+    href: link.href,
+    text: link.title,
   }));
 
   return (

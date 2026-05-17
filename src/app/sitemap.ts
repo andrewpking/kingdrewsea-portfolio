@@ -22,6 +22,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: url + "/projects/win11-rufus",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: url + "/projects/high-speed-rail",
       lastModified: new Date(),
       changeFrequency: "monthly",
