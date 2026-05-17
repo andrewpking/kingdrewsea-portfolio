@@ -1,20 +1,36 @@
 import Project from "../components/Project";
 import { projects } from "../components/pages";
 import "../styles.scss";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Projects - Drew King",
-  description:
-    "Explore Drew King's portfolio of software engineering and UX design projects",
-  alternates: {
-    canonical: "/projects",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Projects - Drew King",
+    description:
+      "Explore Drew King's portfolio of software engineering and UX design projects",
+    alternates: {
+      canonical: "/projects",
+    },
+    openGraph: {
+      type: "website",
+      title: "Projects - Drew King",
+      description:
+        "Explore Drew King's portfolio of software engineering and UX design projects",
+      locale: "en_US",
+      siteName: "Drew King - Portfolio",
+    },
+    twitter: {
+      card: "summary",
+      title: "Projects - Drew King",
+      description:
+        "Explore Drew King's portfolio of software engineering and UX design projects",
+    },
+  };
+}
 
 export default function Home() {
   return (
-    <main>
+    <>
       <h1 className="text-4xl font-bold mb-8">Projects</h1>
       <p className="text-lg mb-8">
         Drew has worked on a variety of projects throughout their career. Here
@@ -89,6 +105,6 @@ export default function Home() {
           selection algorithms to assess accuracy under various conditions.
         </p>
       </Project>
-    </main>
+    </>
   );
 }
