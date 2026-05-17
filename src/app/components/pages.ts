@@ -97,6 +97,29 @@ const pages: Record<string, PageMetadata> = {
 };
 
 const projects: Record<string, PageMetadata> = {
+  win11: {
+    title: "Install Windows 11 on almost anything",
+    description:
+      "A tutorial covering clean installation of Windows 11 using Rufus, including prep, driver backup, and Intel Mac hardware support.",
+    image: "/images/mba-win11.jpg",
+    imageAlt:
+      "A screenshot of a 2013 MacBook Air, running Windows 11 with a light color scheme and a boat dock background.",
+    href: "/projects/win11-rufus",
+    date: "2026-05-17",
+    authors: "Drew King, Claude",
+    openGraph: {
+      ...DEFAULT_OG,
+      type: "article",
+      images: [
+        {
+          url: "/images/mba-win11.jpg",
+          width: 1200,
+          height: 630,
+          alt: "A screenshot of a 2013 MacBook Air, running Windows 11 with a light color scheme and a boat dock background.",
+        },
+      ],
+    },
+  },
   HighSpeedRail: {
     title: "High Speed Rail",
     description: "Visualization reimagining the future of travel",

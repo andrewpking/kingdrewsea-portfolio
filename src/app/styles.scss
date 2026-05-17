@@ -152,6 +152,8 @@ header button:hover {
     color: map.get(map.get($color-pallete, "light"), "grey-900");
 }
 
+// Body styles
+
 body {
     background-color: map.get(map.get($color-pallete, "light"), "grey-100");
     color: map.get(map.get($color-pallete, "light"), "grey-900");
@@ -163,6 +165,11 @@ main.project-page {
     max-width: 70rem;
     padding: 1.25rem;
     background-color: map.get(map.get($color-pallete, "light"), "grey-100");
+
+    nav#toc ul li {
+        list-style-type: none;
+        padding: 0.25rem;
+    }
 }
 
 main a {

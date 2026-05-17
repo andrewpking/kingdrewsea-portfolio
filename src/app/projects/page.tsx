@@ -20,6 +20,18 @@ export default function Home() {
         Drew has worked on a variety of projects throughout their career. Here
         are some of their most notable projects:
       </p>
+      <Project metadata={projects.win11}>
+        <p>
+          This guide documents the full process of performing a clean,
+          bloat-free Windows 11 installation across PC and Intel Mac hardware.
+          It covers everything from disabling BitLocker and FileVault before
+          install, to exporting drivers with DISM, fetching Boot Camp drivers
+          without macOS using a Python 3 script, and re-injecting drivers
+          post-install via pnputil. Originally written to help a family member,
+          it evolved into a comprehensive technical reference covering edge
+          cases most guides skip entirely.
+        </p>
+      </Project>
       <Project metadata={projects.kbcs}>
         <p>
           Drew is currently an operations support specialist at KBCS, building

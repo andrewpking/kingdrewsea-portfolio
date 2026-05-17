@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -18,9 +18,12 @@
     "dompurify": "^3.2.6",
     "jsdom": "^26.1.0",
     "next": "15.2.4",
+    "prismjs": "^1.30.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
+    "rehype-prism-plus": "^2.0.2",
+    "remark-gfm": "^4.0.1",
     "sass": "^1.83.0",
     "topojson-client": "^2.0.0"
   },
