@@ -5,6 +5,7 @@ import "./globals.css";
 import "prismjs/themes/prism-tomorrow.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import "./styles.scss";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
