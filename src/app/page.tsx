@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import PreviewCard from "./components/PreviewCard";
 import { projects, type ProjectData } from "./components/pages";
 import Image from "next/image";
-import "./styles.scss";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
