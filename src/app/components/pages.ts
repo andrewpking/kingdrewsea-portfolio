@@ -97,6 +97,16 @@ export const projects: Record<string, ProjectData> = {
     date: "2024-12-15",
     authors: "Drew King, Joey Krueger, Jack Rosenbloom",
   },
+  devInsights: {
+    title: "Dev Insights Dashboard",
+    description:
+      "Live Dashboard of insights on my social media posts and repo activity",
+    image: "/images/null.png",
+    imageAlt: "Nothing here yet...",
+    href: "/projects/dev-insights",
+    date: "2026-07-04",
+    authors: "Drew King",
+  },
   kbcs: {
     title: "KBCS Theme",
     description: "WordPress theme update following accessibility principles",
