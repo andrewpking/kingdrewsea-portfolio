@@ -6,7 +6,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 This is a personal portfolio developed in Next.js to showcase my experience with UX Engineering and data analytics. The homepage and GUI components are written in typescript with React. Each project is an MDX page found in the `src/app` directory inside of the subdirectory of each project and the file is named `page.mdx`.
 
-This project use the Next.js built in Router and is compiled with Turbopack. The resulting project is a website deployed to vercel. You can use the live site at [drewking.dev](https://drewking.dev/).
+This project use the Next.js built in Router and is compiled with Turbopack. The resulting project is a website deployed to vercel. You can use the live site at [drewking.dev](https://drewking.dev/). I have also added a staging environment.
 
 ## Run Locally
 
@@ -23,13 +23,13 @@ Otherwise, you will need to follow the [install instructions in the NVM reposito
 Once you have installed Node Version Manager, ensure you have Node 20 installed:
 
 ```bash
-nvm install 20
+nvm install 22
 ```
 
 Once it has been installed, use this version (or higher) to run the project:
 
 ```bash
-nvm use 20
+nvm use 22
 ```
 
 Install all dependencies (ensure this command is run from the root of the project directory):
