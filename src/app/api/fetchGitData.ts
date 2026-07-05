@@ -8,10 +8,12 @@ import { createUnauthenticatedAuth } from "@octokit/auth-unauthenticated";
 const username: string = "andrewpking";
 
 interface RepoSummary {
-  url: string | undefined;
-  name: string | undefined;
-  stars: number | undefined;
-  forks: number | undefined;
+  url: string;
+  name: string;
+  owner: string | null | undefined;
+  stars: number | null | undefined;
+  forks: number | null | undefined;
+  last_update: string | null | undefined;
 }
 
 /**
@@ -34,8 +36,10 @@ async function getAllReposForUser(): Promise<RepoSummary[]> {
   const repos: RepoSummary[] = data.map((repo) => ({
     url: repo.html_url,
     name: repo.name,
+    owner: repo.owner.name,
     stars: repo.stargazers_count,
     forks: repo.forks_count,
+    last_update: repo.updated_at,
   }));
 
   return repos; //TODO: Retry if repos is empty
